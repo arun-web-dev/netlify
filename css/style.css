@@ -64,7 +64,10 @@ body {
   padding: 7px;
   z-index: 501;
   border-radius: 4px;
-  background-color: #87509c;
+  background-color: #3d3d40;
+}
+.hamburger.change {
+  background: #171815;
 }
 
 /*hidden nav bar start */
@@ -75,18 +78,6 @@ body {
   background: #fff;
   margin: 5px;
   transition: all 0.5s;
-}
-
-.hamburger {
-  position: absolute;
-  cursor: pointer;
-  right: 2%;
-  top: 20px;
-  transform: translate(-2%, -2%);
-  padding: 7px;
-  z-index: 501;
-  border-radius: 4px;
-  background-color: #87509c;
 }
 
 .line {
