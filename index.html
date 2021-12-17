@@ -21,89 +21,91 @@
   </head>
   <body>
     <div main-container>
-      <header class="header home">
-        <div class="wrap">
-          <nav class="header-nav">
-            <div class="logo">
-              <p>B</p>
-              <p>INO</p>
-            </div>
-            <ul>
-              <li>
-                <a href="#home" target="_self" rel="noopener noreferrer"
-                  >Home</a
-                >
-              </li>
-              <l1
-                ><a href="#aboutUs" target="_self" rel="noopener noreferrer"
-                  >about us</a
-                ></l1
-              >
-              <l1
-                ><a href="#portfolio" target="_self" rel="noopener noreferrer"
-                  >portfolio</a
-                ></l1
-              >
-              <l1
-                ><a href="#pricing" target="_self" rel="noopener noreferrer"
-                  >pricing</a
-                ></l1
-              >
-              <l1
-                ><a href="#team" target="_self" rel="noopener noreferrer"
-                  >team</a
-                ></l1
-              >
-              <l1
-                ><a href="#blog" target="_self" rel="noopener noreferrer"
-                  >blog</a
-                ></l1
-              >
-              <l1
-                ><a href="#contact" target="_self" rel="noopener noreferrer"
-                  >contact</a
-                ></l1
-              >
-            </ul>
-          </nav>
-          <section id="home-main-section" class="home-main-section">
-            <div class="home-main">
-              <div class="home-main-content">
-                <h1>Our Clients Our First Priority</h1>
-                <h2>WELCOME TO BINO</h2>
-                <div class="small-circle"></div>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
-                </p>
-              </div>
-              <div class="home-button">
-                <a
-                  href="#"
-                  target="_self"
-                  rel="noopener noreferrer"
-                  class="get-started-btn"
-                  >get started now</a
-                >
-
-                <a
-                  href="#"
-                  target="_self"
-                  rel="noopener noreferrer"
-                  class="learn-more-btn"
-                  >learn more</a
-                >
-              </div>
-            </div>
-            <div class="arrow-icon">
-              <i class="fas fa-anchor"></i>
-            </div>
-          </section>
-        </div>
+      <header class="header sticky">
+        <nav class="header-nav">
+          <div class="logo">
+            <p>B</p>
+            <p>INO</p>
+          </div>
+          <div class="hamburger">
+            <div id="line-1" class="line"></div>
+            <div id="line-2" class="line"></div>
+            <div id="line-3" class="line"></div>
+          </div>
+          <ul class="nav-links-menu">
+            <li>
+              <a href="#home" target="_self" rel="noopener noreferrer">Home</a>
+            </li>
+            <l1
+              ><a href="#aboutUs" target="_self" rel="noopener noreferrer"
+                >about us</a
+              ></l1
+            >
+            <l1
+              ><a href="#portfolio" target="_self" rel="noopener noreferrer"
+                >portfolio</a
+              ></l1
+            >
+            <l1
+              ><a href="#pricing" target="_self" rel="noopener noreferrer"
+                >pricing</a
+              ></l1
+            >
+            <l1
+              ><a href="#team" target="_self" rel="noopener noreferrer"
+                >team</a
+              ></l1
+            >
+            <l1
+              ><a href="#blog" target="_self" rel="noopener noreferrer"
+                >blog</a
+              ></l1
+            >
+            <l1
+              ><a href="#contact" target="_self" rel="noopener noreferrer"
+                >contact</a
+              ></l1
+            >
+          </ul>
+        </nav>
       </header>
+      <section id="home-main-section" class="home-main-section home">
+        <div class="wrap">
+          <div class="home-main">
+            <div class="home-main-content">
+              <h1>Our Clients Our First Priority</h1>
+              <h2>WELCOME TO BINO</h2>
+              <div class="small-circle"></div>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </p>
+            </div>
+            <div class="home-button">
+              <a
+                href="#"
+                target="_self"
+                rel="noopener noreferrer"
+                class="get-started-btn"
+                >get started now</a
+              >
+
+              <a
+                href="#"
+                target="_self"
+                rel="noopener noreferrer"
+                class="learn-more-btn"
+                >learn more</a
+              >
+            </div>
+          </div>
+          <div class="arrow-icon">
+            <i class="fas fa-anchor"></i>
+          </div>
+        </div>
+      </section>
 
       <section class="second-section">
         <div class="second-section-main">
@@ -249,6 +251,7 @@
             </p>
             <div class="small-circle-second"></div>
           </div>
+
           <div class="case-study-flex">
             <div class="case-study-image">
               <img src="./images/casestudy.png" alt="case-study" srcset="" />
@@ -703,5 +706,6 @@
         </div>
       </footer>
     </div>
+    <script src="./script/script.js"></script>
   </body>
 </html>
