@@ -120,6 +120,22 @@ body {
 /*hidden nav bar end */
 
 /*script animation full page start*/
+.history-content,
+.section-content,
+.services-content,
+.case-study,
+.recent-content,
+.list-items-container,
+.pricing-section-container,
+.history-content,
+.our-team-container,
+.our-blog-container,
+.integration-container,
+.keep-in-touch-container,
+.subscribe-container-content {
+  opacity: 0;
+}
+
 @keyframes from-top {
   0% {
     opacity: 0;
@@ -1063,8 +1079,8 @@ input.textarea-content {
 
 .footer-last {
   width: 100%;
-  background: #202020;
-  padding: 30px 0;
+  background: rgb(32, 32, 32);
+  padding: 15px 0px;
 }
 
 .footer-container {

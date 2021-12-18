@@ -53,7 +53,7 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-window.addEventListener("scroll", home_main_function);
+// window.addEventListener("scroll", home_main_function);
 window.addEventListener("scroll", section_function);
 window.addEventListener("scroll", history_function);
 window.addEventListener("scroll", services_function);
@@ -67,18 +67,18 @@ window.addEventListener("scroll", blog_function);
 window.addEventListener("scroll", keepInTouch_function);
 window.addEventListener("scroll", subscribe_function);
 
-function home_main_function() {
-  const triggerBottom = (window.innerHeight / 5) * 4;
-  const homeStart = homeContent.getBoundingClientRect().top;
-  if (homeStart < triggerBottom) {
-    fromTopHome();
-  } else {
-    homeContent.classList.remove("from-top");
-  }
-}
-function fromTopHome() {
-  homeContent.classList.add("from-top");
-}
+// function home_main_function() {
+//   const triggerBottom = (window.innerHeight / 5) * 4;
+//   const homeStart = homeContent.getBoundingClientRect().top;
+//   if (homeStart < triggerBottom) {
+//     fromTopHome();
+//   } else {
+//     homeContent.classList.remove("from-top");
+//   }
+// }
+// function fromTopHome() {
+//   homeContent.classList.add("from-top");
+// }
 function section_function() {
   const triggerBottom = (window.innerHeight / 5) * 4;
   const sectionStart = sectionContent.getBoundingClientRect().top;
