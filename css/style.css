@@ -147,7 +147,8 @@ body {
   border-radius: 2px;
   display: inline-block;
 }
-.nav-links-menu a:hover {
+.nav-links-menu a:hover,
+.active {
   background: #482424;
   color: #fff;
   transition: all 0.5s;
@@ -316,6 +317,9 @@ section#home-main-section {
 .arrow-icon a i {
   font-size: 1.5rem;
   color: #e74c3c;
+}
+.arrow-icon-link {
+  cursor: pointer;
 }
 .second-section {
   width: 100%;
