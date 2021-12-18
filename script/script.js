@@ -1,6 +1,18 @@
 "use sctrict";
+const homeMainBefore = document.querySelector("#home-main-before");
 
+homeMainBefore.addEventListener("click", function () {
+  homeMain.classList.toggle("from-right");
+  homeMain.classList.remove("from-left");
+});
+const homeMainAfter = document.querySelector("#home-main-after");
+homeMainAfter.addEventListener("click", function () {
+  homeMain.classList.toggle("from-left");
+  homeMain.classList.remove("from-right");
+});
+const homeMain = document.getElementById("home-main");
 const homeMainSection = document.getElementById("home-main-section");
+
 const homeContent = document.getElementById("home-content");
 const secondSection = document.getElementById("second-section");
 const sectionContent = document.getElementById("section-content");
