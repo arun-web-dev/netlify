@@ -143,11 +143,12 @@ a {
 
 @keyframes from-left {
   0% {
-    right: -100%;
+    right: -30%;
     opacity: 0;
     transform: scale(0.9);
     transition: all 0.5s;
   }
+
   100% {
     opacity: 1;
     right: 0;
@@ -164,7 +165,7 @@ a {
 
 @keyframes from-right {
   0% {
-    left: -100%;
+    left: -30%;
     opacity: 0;
     transform: scale(0.9);
     transition: all 0.5s;
@@ -230,7 +231,7 @@ a {
 }
 .nav-links-menu a:hover,
 .active {
-  background: rgb(60 53 53);
+  background: #2c1c1f;
   color: #fff;
   transition: all 0.5s;
   transform: scale3d(1.2, 1.2, 1.2);
@@ -265,6 +266,19 @@ a {
   position: absolute;
   left: 2%;
   top: 38%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.home-main-before:hover a,
+.home-main-after:hover a {
+  color: #e74c3c;
+  transition: all 0.5s;
+}
+.home-main-before:hover,
+.home-main-after:hover {
+  background-color: #fff;
+  transition: all 0.5s;
 }
 
 .home-main-after {
@@ -274,6 +288,8 @@ a {
   position: absolute;
   right: 2%;
   top: 38%;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 .home-main-before a,
 .home-main-after a {
@@ -281,6 +297,7 @@ a {
   font-size: 39px;
   font-weight: 800;
   outline: 0;
+  transition: all 0.5s;
 }
 
 .home-main-content {
@@ -315,7 +332,7 @@ a {
   position: relative;
   border-radius: 50%;
   display: inline-block;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .small-circle::before,
@@ -359,6 +376,17 @@ a {
   text-transform: uppercase;
   color: #fff;
   border-radius: 2px;
+  padding: 2% 4%;
+  display: inline-block;
+  margin-top: 30px;
+  border-radius: 3px;
+}
+.get-started-btn-top,
+.learn-more-btn-top {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 2px;
   padding: 1.2% 4%;
   display: inline-block;
   margin-top: 30px;
@@ -368,8 +396,20 @@ a {
   background: #e74c3c;
   transition: all 0.5s;
 }
+.get-started-btn-top {
+  background: #e74c3c;
+  transition: all 0.5s;
+}
+a.get-started-btn-top:hover {
+  background: #3c3535;
+  transition: all 0.5s;
+}
 a.get-started-btn:hover {
   background: #3c3535;
+  transition: all 0.5s;
+}
+a.get-started-btn-top:active {
+  transform: scale3d(0.95, 0.95, 0.95);
   transition: all 0.5s;
 }
 a.get-started-btn:active {
@@ -384,9 +424,26 @@ a.get-started-btn:active {
   margin-left: 50px;
   transition: all 0.5s;
 }
+.learn-more-btn-top {
+  height: auto;
+  color: white;
+  background: transparent;
+  border: 2px solid white;
+  margin-left: 50px;
+  transition: all 0.5s;
+}
+a.learn-more-btn-top:active {
+  transform: scale3d(0.95, 0.95, 0.95);
+  transition: all 0.5s;
+}
 a.learn-more-btn:active {
   transform: scale3d(0.95, 0.95, 0.95);
   transition: all 0.5s;
+}
+a.learn-more-btn-top:hover {
+  background: rgb(60 53 53);
+  transition: all 0.5s;
+  border: 2px solid rgb(60 53 53);
 }
 a.learn-more-btn:hover {
   background: rgb(60 53 53);
@@ -402,6 +459,15 @@ a.learn-more-btn:hover {
   display: inline-block;
   border-radius: 50%;
   margin: 0 auto;
+}
+
+.arrow-icon a i:hover {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.arrow-icon:hover {
+  background: rgb(61, 61, 64);
 }
 
 section#home-main-section {
@@ -421,6 +487,7 @@ section#home-main-section {
   z-index: 2;
   top: -6%;
   left: 49%;
+  outline: 3px solid #ffffff52;
 }
 .arrow-icon a i {
   font-size: 1.5rem;
@@ -448,10 +515,29 @@ section#home-main-section {
   text-align: center;
 }
 
-.second-section-main span {
-  border: 1px solid red;
-  padding: 10px;
-  color: red;
+.single_feature:hover .single_feature_icon {
+  border-color: #e74c3c;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+
+.single_feature .single_feature_icon {
+  border: 1px solid #ddd;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  margin: 20px auto;
+  transition: all 0.5s;
+}
+
+.single_feature_icon i {
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.single_feature:hover .single_feature_icon i {
+  transform: rotate(-45deg);
+  transition: all 0.5s;
 }
 
 .second-section-main h3 {
@@ -1192,6 +1278,10 @@ input.textarea-content {
 /*media queries 768px start */
 
 @media screen and (max-width: 768px) {
+  .get-started-btn-top,
+  .learn-more-btn-top {
+    font-size: 0.7rem;
+  }
   .arrow-icon {
     position: absolute;
     width: 40px;

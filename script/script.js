@@ -2,13 +2,13 @@
 const homeMainBefore = document.querySelector("#home-main-before");
 
 homeMainBefore.addEventListener("click", function () {
-  homeMain.classList.toggle("from-right");
-  homeMain.classList.remove("from-left");
+  homeMain.classList.toggle("from-left");
+  homeMain.classList.remove("from-right");
 });
 const homeMainAfter = document.querySelector("#home-main-after");
 homeMainAfter.addEventListener("click", function () {
-  homeMain.classList.toggle("from-left");
-  homeMain.classList.remove("from-right");
+  homeMain.classList.toggle("from-right");
+  homeMain.classList.remove("from-left");
 });
 const homeMain = document.getElementById("home-main");
 const homeMainSection = document.getElementById("home-main-section");
