@@ -119,6 +119,24 @@ body {
 
 /*hidden nav bar end */
 
+/*script animation full page start*/
+@keyframes from-top {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.from-top {
+  animation: from-top 1.2s ease-in-out 0s;
+  -webkit-animation: from-top 1.2s ease-in-out 0s;
+  opacity: 1 !important;
+}
+/*end*/
+
 .header-nav {
   display: flex;
   justify-content: space-around;
