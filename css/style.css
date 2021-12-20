@@ -235,7 +235,7 @@ a {
   transition: all 0.5s;
 }
 .home {
-  background: url(../images/homebg.jpg) no-repeat center center;
+  background: url(../images/homebg.webp) no-repeat center center;
   background-size: cover;
   clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
 }
@@ -611,7 +611,7 @@ section#home-main-section {
   text-align: right;
 }
 .services-content-image {
-  background: url(../images/IPAD.png);
+  background: url(../images/IPAD.webp);
   background-size: cover;
   width: 100%;
 }
@@ -958,7 +958,7 @@ section#home-main-section {
 
 .list-items {
   width: 100%;
-  background: url(../images/counterbg.jpg);
+  background: url(../images/counterbg.webp);
   background-size: cover;
   padding: 100px 0;
 }
@@ -1096,7 +1096,7 @@ section#home-main-section {
 
 .our-team {
   width: 100%;
-  background: url(../images/test-page-bg.png);
+  background: url(../images/test-page-bg.webp);
   background-size: cover;
   position: relative;
 }
@@ -1107,7 +1107,7 @@ section#home-main-section {
   left: 0;
   bottom: -23%;
   content: "";
-  background: url(../images/teambg2.png) no-repeat bottom center;
+  background: url(../images/teambg2.webp) no-repeat bottom center;
 }
 
 .our-team-relative {
@@ -1308,8 +1308,8 @@ li:hover .single_team_text {
 }
 
 .integration-image p {
-  width: 250px;
-  height: auto;
+  width: 211px;
+  height: 101px;
 }
 
 .int-flex-first {
@@ -1379,23 +1379,23 @@ li:hover .single_team_text {
   margin-top: 20px;
 }
 .flextop-image {
-  background: url(../images/blogone.png);
+  background: url(../images/blogone.webp);
   background-size: cover;
 }
 
 .second {
   background: none;
-  background: url(../images/blogtwo.png);
+  background: url(../images/blogtwo.webp);
   background-size: cover;
 }
 .third {
   background: none;
-  background: url(../images/blogthree.png);
+  background: url(../images/blogthree.webp);
   background-size: cover;
 }
 .fourth {
   background: none;
-  background: url(../images/blogfour.png);
+  background: url(../images/blogfour.webp);
   background-size: cover;
 }
 
@@ -1487,7 +1487,7 @@ input.textarea-content {
 
 .subscribe {
   width: 100%;
-  background: url(../images/lastbg.png);
+  background: url(../images/lastbg.webp);
   background-size: cover;
 }
 .wrap-last {
@@ -1637,6 +1637,11 @@ img:hover {
     gap: 10px;
   }
 
+  img.int-last-image {
+    display: inline-block;
+    margin-left: -25%;
+  }
+
   .nav-links-menu {
     flex-wrap: wrap;
     justify-content: center;
@@ -1711,7 +1716,7 @@ img:hover {
   }
   .list-items {
     width: 100%;
-    background: url(../images/counterbg.jpg);
+    background: url(../images/counterbg.webp);
     background-size: cover;
     padding: 50px 0;
   }
@@ -1864,7 +1869,7 @@ img:hover {
     left: 0;
     bottom: 0;
     content: "";
-    background: url(../images/teambg2.png);
+    background: url(../images/teambg2.webp);
   }
   .main_team ul li:nth-child(1) {
     width: 15%;
