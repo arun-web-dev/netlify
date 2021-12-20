@@ -1150,7 +1150,7 @@ section#home-main-section {
 .main_team ul li:nth-child(1) {
   width: 15%;
   display: inline-block;
-  float: left;
+
   margin-left: 3%;
   position: absolute;
   left: 1%;
@@ -1159,7 +1159,7 @@ section#home-main-section {
 .main_team ul li:nth-child(2) {
   width: 15%;
   display: inline-block;
-  float: left;
+
   margin-left: 3%;
   position: absolute;
   left: 19%;
@@ -1168,7 +1168,6 @@ section#home-main-section {
 .main_team ul li:nth-child(3) {
   width: 15%;
   display: inline-block;
-  float: left;
   margin-left: 3%;
   position: absolute;
   left: 37%;
@@ -1177,7 +1176,6 @@ section#home-main-section {
 .main_team ul li:nth-child(4) {
   width: 15%;
   display: inline-block;
-  float: left;
   margin-left: 3%;
   position: absolute;
   left: 55%;
@@ -1186,7 +1184,6 @@ section#home-main-section {
 .main_team ul li:nth-child(5) {
   width: 15%;
   display: inline-block;
-  float: left;
   margin-left: 3%;
   position: absolute;
   left: 73%;
@@ -1248,35 +1245,30 @@ li:hover .single_team_text {
 } */
 .team-image ul li:nth-child(1) {
   width: 6%;
-  float: left;
   position: absolute;
   left: 10%;
   top: 70%;
 }
 .team-image ul li:nth-child(2) {
   width: 6%;
-  float: left;
   position: absolute;
   left: 30%;
   top: 64%;
 }
 .team-image ul li:nth-child(3) {
   width: 6%;
-  float: left;
   position: absolute;
   left: 50%;
   top: 66%;
 }
 .team-image ul li:nth-child(4) {
   width: 6%;
-  float: left;
   position: absolute;
   left: 70%;
   top: 76%;
 }
 .team-image ul li:nth-child(5) {
   width: 6%;
-  float: left;
   position: absolute;
   left: 90%;
   top: 77%;
@@ -1874,7 +1866,6 @@ img:hover {
   .main_team ul li:nth-child(1) {
     width: 15%;
     display: inline-block;
-    float: left;
     margin-left: 3%;
     position: absolute;
     left: 5%;
@@ -1890,7 +1881,6 @@ img:hover {
   .main_team ul li:nth-child(2) {
     width: 15%;
     display: inline-block;
-    float: left;
     margin-left: 3%;
     position: absolute;
     left: 21%;
@@ -1899,7 +1889,6 @@ img:hover {
   .main_team ul li:nth-child(3) {
     width: 15%;
     display: inline-block;
-    float: left;
     margin-left: 3%;
     position: absolute;
     left: 37%;
@@ -1908,7 +1897,6 @@ img:hover {
   .main_team ul li:nth-child(4) {
     width: 15%;
     display: inline-block;
-    float: left;
     margin-left: 3%;
     position: absolute;
     left: 55%;
@@ -1917,7 +1905,6 @@ img:hover {
   .main_team ul li:nth-child(5) {
     width: 15%;
     display: inline-block;
-    float: left;
     margin-left: 3%;
     position: absolute;
     left: 73%;

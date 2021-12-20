@@ -59,8 +59,8 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("change");
 });
 
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function () {
+for (const btn of btns) {
+  btn.addEventListener("click", function () {
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
@@ -68,7 +68,7 @@ for (var i = 0; i < btns.length; i++) {
     hamburger.classList.remove("change");
   });
 }
-// window.addEventListener("scroll", home_main_function);
+
 window.addEventListener("scroll", section_function);
 window.addEventListener("scroll", history_function);
 window.addEventListener("scroll", services_function);
@@ -82,18 +82,6 @@ window.addEventListener("scroll", blog_function);
 window.addEventListener("scroll", keepInTouch_function);
 window.addEventListener("scroll", subscribe_function);
 
-// function home_main_function() {
-//   const triggerBottom = (window.innerHeight / 5) * 4;
-//   const homeStart = homeContent.getBoundingClientRect().top;
-//   if (homeStart < triggerBottom) {
-//     fromTopHome();
-//   } else {
-//     homeContent.classList.remove("from-top");
-//   }
-// }
-// function fromTopHome() {
-//   homeContent.classList.add("from-top");
-// }
 function section_function() {
   const triggerBottom = (window.innerHeight / 5) * 4;
   const sectionStart = sectionContent.getBoundingClientRect().top;
@@ -270,8 +258,8 @@ const bttn = document.querySelectorAll(".recent-content-links button");
 const product = document.querySelectorAll(".image-one");
 bttn.forEach((items) => {
   items.addEventListener("click", function () {
-    for (let i = 0; i < bttn.length; i++) {
-      bttn[i].classList.remove("active2");
+    for (let btn of bttn) {
+      btn.classList.remove("active2");
     }
     items.classList.add("active2");
 
@@ -284,3 +272,24 @@ bttn.forEach((items) => {
     });
   });
 });
+
+// loading animation
+
+const loading = document.querySelectorAll(".list-items-content h2");
+
+let load = 0;
+let int = setInterval(blurring, 30);
+function blurring() {
+  load++;
+  if (load > 99) {
+    clearInterval(int);
+  }
+  loading.forEach((loads) => {
+    loads.innerText = load;
+    loads.style.opacity = scale(loads, 0, 100, 0, 1);
+  });
+}
+
+const scale = function scale(number, inMin, inMax, outMin, outMax) {
+  return ((number - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
+};
