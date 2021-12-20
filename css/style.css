@@ -214,12 +214,13 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 400;
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-size: 1rem;
   margin-left: 20px;
   padding: 5px;
-  transition: all 0.5s;
+  transition: all 0.5s ease 0s;
   border-radius: 2px;
+  transform: scale3d(1, 1, 1);
   display: inline-block;
 }
 .nav-links-menu a:hover,
@@ -741,12 +742,29 @@ section#home-main-section {
   flex-wrap: wrap;
   justify-content: center;
 }
-
-.recent-content-links a {
-  text-decoration: none;
+.recent-content-links button {
+  margin: 10px;
+  border: none;
+  outline: none;
+  padding: 10px 10px;
+  color: #999999;
   text-transform: uppercase;
-  color: #a49993;
-  margin-right: 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  transform: scale3d(1, 1, 1);
+  transition: all 0.5s;
+  background: #fff;
+}
+.recent-content-links button:hover,
+.recent-content-links .active2 {
+  background: #2c1c1f;
+  color: #fff;
+  transition: all 0.5s;
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.recent-content-links button:active {
+  transform: scale(0.95);
+  transition: all 0.5s;
 }
 
 .recent-content-links p {
@@ -1654,11 +1672,24 @@ img:hover {
     margin-right: 5px;
     font-size: 0.7rem;
   }
+  .recent-content-links button {
+    margin: 0px;
+    border: none;
+    outline: none;
+    padding: 4px;
+    color: #999999;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.5s;
+    background: #fff;
+  }
 
   .recent-content-links p {
-    margin-right: 15px;
-    padding-bottom: 8px;
+    margin: 0 5px;
+    padding-bottom: 1px;
   }
+
   .wrap-last {
     padding: 50px 0;
   }

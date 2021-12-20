@@ -263,3 +263,24 @@ function subscribe_function() {
 function fromTopSubscribeContent() {
   subscribeContainerContent.classList.add("from-top");
 }
+
+//recent works filter and active
+
+const bttn = document.querySelectorAll(".recent-content-links button");
+const product = document.querySelectorAll(".image-one");
+bttn.forEach((items) => {
+  items.addEventListener("click", function () {
+    for (let i = 0; i < bttn.length; i++) {
+      bttn[i].classList.remove("active2");
+    }
+    items.classList.add("active2");
+
+    product.forEach((show) => {
+      show.style.display = "none";
+      let products = items.textContent.toLowerCase();
+      if (show.getAttribute("data-att") === products || products === "all") {
+        show.style.display = "flex";
+      }
+    });
+  });
+});
