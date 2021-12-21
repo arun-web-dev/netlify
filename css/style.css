@@ -281,10 +281,16 @@ a {
   position: relative;
 }
 
+.animi-from {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .home-main {
   padding-top: 130px;
   padding-bottom: 180px;
-  max-width: 80%;
+  max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -426,9 +432,11 @@ a {
   outline: 0;
 }
 .get-started-btn-top {
-  background: #532622;
+  background: #be2e20;
   transition: all 0.5s;
-  border: 2px solid #532622;
+  border: 2px solid #be2e20;
+  font-weight: 500;
+}rder: 2px solid #532622;
 }
 
 a.get-started-btn-top:hover {
