@@ -327,3 +327,29 @@ radioBtn.forEach((rdBtn) => {
     }
   });
 });
+
+const scrollBtns = document.querySelectorAll(".services-content-scroll-btn");
+
+const contentItems = document.querySelector(".services-content-items");
+
+scrollBtns.forEach((sbtn) => {
+  sbtn.addEventListener("click", function () {
+    for (let btns1 of scrollBtns) {
+      btns1.classList.remove("scroll-btn-active");
+    }
+    sbtn.classList.add("scroll-btn-active");
+
+    //scroll btn
+    if (contentItems.classList.contains("services-active1")) {
+      contentItems.classList.remove("services-active1");
+      contentItems.classList.add("services-active2");
+    } else if (contentItems.classList.contains("services-active2")) {
+      contentItems.classList.remove("services-active2");
+
+      contentItems.classList.add("services-active3");
+    } else if (contentItems.classList.contains("services-active3")) {
+      contentItems.classList.remove("services-active3");
+      contentItems.classList.add("services-active1");
+    }
+  });
+});
