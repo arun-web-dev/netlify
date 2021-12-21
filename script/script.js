@@ -1,14 +1,39 @@
 "use sctrict";
 const homeMainBefore = document.querySelector("#home-main-before");
 
-homeMainBefore.addEventListener("click", function () {
-  homeMain.classList.toggle("from-left");
-  homeMain.classList.remove("from-right");
-});
 const homeMainAfter = document.querySelector("#home-main-after");
+
 homeMainAfter.addEventListener("click", function () {
-  homeMain.classList.toggle("from-right");
-  homeMain.classList.remove("from-left");
+  if (homeMain.classList.contains("from-left")) {
+    homeMain.classList.toggle("from-left1");
+  } else {
+    homeMain.classList.remove("from=right");
+    homeMain.classList.remove("from-right1");
+    homeMain.classList.add("from-left");
+  }
+});
+homeMainBefore.addEventListener("click", function () {
+  if (homeMain.classList.contains("from-right")) {
+    homeMain.classList.remove("from-right");
+    homeMain.classList.remove("from-left");
+    homeMain.classList.remove("from-left1");
+    homeMain.classList.add("from-right1");
+  } else {
+    homeMain.classList.add("from-right");
+  }
+
+  /*if (
+    homeMain.classList.contains(
+      "from-left || from-left1 || from-right1 || from-right"
+    )
+  ) {
+    homeMain.classList.remove("from-left1");
+    homeMain.classList.remove("from-left");
+    homeMain.classList.remove("from-right");
+    homeMain.classList.remove("from-right1");
+  } else {
+    homeMain.classList.add("from-right1");
+  }*/
 });
 const homeMain = document.getElementById("home-main");
 const homeMainSection = document.getElementById("home-main-section");

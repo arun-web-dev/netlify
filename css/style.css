@@ -142,7 +142,7 @@ a {
   opacity: 0;
 }
 
-@keyframes from-left {
+@keyframes from-right1 {
   0% {
     right: -100%;
     transition: all 0.5s;
@@ -153,14 +153,32 @@ a {
     transition: all 0.5s;
   }
 }
-.from-left {
-  animation: from-left 0.5s ease-in-out 0s;
-  -webkit-animation: from-left 0.5s ease-in-out 0s;
+.from-right1 {
+  animation: from-right1 0.5s ease-in-out 0s;
+  -webkit-animation: from-right1 0.5s ease-in-out 0s;
   transition: all 0.5s;
   position: relative;
 }
 
 @keyframes from-right {
+  0% {
+    right: -100%;
+    transition: all 0.5s;
+  }
+
+  100% {
+    right: 0;
+    transition: all 0.5s;
+  }
+}
+.from-right {
+  animation: from-right 0.5s ease-in-out 0s;
+  -webkit-animation: from-right 0.5s ease-in-out 0s;
+  transition: all 0.5s;
+  position: relative;
+}
+
+@keyframes from-left {
   0% {
     left: -100%;
     transition: all 0.5s;
@@ -170,9 +188,26 @@ a {
     transition: all 0.5s;
   }
 }
-.from-right {
-  animation: from-right 0.5s ease-in-out 0s;
-  -webkit-animation: from-right 0.5s ease-in-out 0s;
+.from-left {
+  animation: from-left 0.5s ease-in-out 0s;
+  -webkit-animation: from-left 0.5s ease-in-out 0s;
+  transition: all 0.5s;
+  position: relative;
+}
+
+@keyframes from-left1 {
+  0% {
+    left: -100%;
+    transition: all 0.5s;
+  }
+  100% {
+    left: 0;
+    transition: all 0.5s;
+  }
+}
+.from-left1 {
+  animation: from-left1 0.5s ease-in-out 0s;
+  -webkit-animation: from-left1 0.5s ease-in-out 0s;
   transition: all 0.5s;
   position: relative;
 }
