@@ -21,19 +21,6 @@ homeMainBefore.addEventListener("click", function () {
   } else {
     homeMain.classList.add("from-right");
   }
-
-  /*if (
-    homeMain.classList.contains(
-      "from-left || from-left1 || from-right1 || from-right"
-    )
-  ) {
-    homeMain.classList.remove("from-left1");
-    homeMain.classList.remove("from-left");
-    homeMain.classList.remove("from-right");
-    homeMain.classList.remove("from-right1");
-  } else {
-    homeMain.classList.add("from-right1");
-  }*/
 });
 const homeMain = document.getElementById("home-main");
 const homeMainSection = document.getElementById("home-main-section");
