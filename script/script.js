@@ -276,7 +276,6 @@ bttn.forEach((items) => {
 // loading animation
 
 const loading = document.querySelectorAll(".list-items-content h2");
-
 let load = 0;
 let int = setInterval(blurring, 30);
 function blurring() {

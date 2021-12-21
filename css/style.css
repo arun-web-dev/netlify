@@ -1360,7 +1360,32 @@ li:hover .single_team_text {
   width: 300px;
   padding: 20px 30px;
   text-align: left;
+  position: relative;
 }
+
+.blog-flex-content.right::before {
+  content: "";
+  position: absolute;
+  right: 99%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid #e74e3e;
+  border-bottom: 13px solid transparent;
+}
+.blog-flex-content.left::after {
+  content: "";
+  position: absolute;
+  left: 99%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-left: 26px solid #e74e3e;
+  border-bottom: 13px solid transparent;
+}
+
 .small-line-left {
   height: 2px;
   width: 40px;
