@@ -1669,7 +1669,35 @@ input.textarea-content {
   width: 100%;
   background: url(../images/lastbg.webp);
   background-size: cover;
+  position: relative;
 }
+
+.subscribe-after {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #e74c3c;
+  right: 4%;
+  top: 90%;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 58px;
+  text-align: center;
+  font-size: 35px;
+  padding: 0px;
+  border: none;
+  display: inline-block;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+.subscribe-after:hover {
+  background: #fff;
+  color: #e74c3c;
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
 .wrap-last {
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
@@ -2039,6 +2067,9 @@ img:hover {
     margin-right: 20px;
     transition: all 0.5s;
     display: inline-block;
+  }
+  .subscribe-after {
+    top: 94%;
   }
 
   /*start icon image*/
