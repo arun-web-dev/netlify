@@ -304,3 +304,26 @@ function blurring() {
 const scale = function scale(number, inMin, inMax, outMin, outMax) {
   return ((number - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 };
+
+const radioBtn = document.querySelectorAll(".small-circle-read-more");
+const radioContent = document.querySelector(".case-study-top-content");
+radioBtn.forEach((rdBtn) => {
+  rdBtn.addEventListener("click", function () {
+    for (let btn of radioBtn) {
+      btn.classList.remove("gray-circle");
+    }
+    rdBtn.classList.add("gray-circle");
+
+    if (radioContent.classList.contains("radio-active1")) {
+      radioContent.classList.remove("radio-active1");
+      radioContent.classList.add("radio-active2");
+    } else if (radioContent.classList.contains("radio-active2")) {
+      radioContent.classList.remove("radio-active2");
+
+      radioContent.classList.add("radio-active3");
+    } else if (radioContent.classList.contains("radio-active3")) {
+      radioContent.classList.remove("radio-active3");
+      radioContent.classList.add("radio-active1");
+    }
+  });
+});

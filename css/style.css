@@ -286,6 +286,7 @@ a {
   padding-bottom: 180px;
   max-width: 80%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .home-main-before {
@@ -914,18 +915,33 @@ section#home-main-section {
   z-index: 1;
   background: #fff;
   padding: 20px 70px;
+  overflow: hidden;
 }
 
 .small-circle-read-more {
   width: 10px;
   height: 10px;
-  background: #e74c3c;
+  background: #fff;
   position: relative;
   border-radius: 50%;
   display: inline-block;
-  margin: 0 auto;
-  margin-top: 20px;
+  border: 0;
+  margin: 20px;
+  outline: 3px solid #0000005e;
+  cursor: pointer;
+  transition: all 0.5s;
+  transform: scale3d(1, 1, 1);
 }
+
+.small-circle-read-more:focus {
+  transform: scale(0.95);
+  transition: all 0.5s ease 0s;
+}
+
+button.small-circle-read-more.gray-circle {
+  background: #e74c3c;
+}
+
 .case-study-icon {
   border: 1px solid #ddd;
   width: 70px;
@@ -933,8 +949,52 @@ section#home-main-section {
   line-height: 70px;
   margin: 20px auto;
   transition: all 0.5s;
+  display: inline-block;
 }
 
+.radio-active1 {
+  position: relative;
+  animation: radio-active1 0.5s ease-in 2s;
+  -webkit-animation: radio-active1 0.5s ease-in;
+}
+
+@keyframes radio-active1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.radio-active2 {
+  position: relative;
+  animation: radio-active2 0.5s ease-in 2s;
+  -webkit-animation: radio-active2 0.5s ease-in;
+}
+
+@keyframes radio-active2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.radio-active3 {
+  position: relative;
+  animation: radio-active3 0.5s ease-in 2s;
+  -webkit-animation: radio-active3 0.5s ease-in;
+}
+
+@keyframes radio-active3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .case-study-idea-content:hover .case-study-icon {
   border-color: #e74c3c;
   transform: rotate(45deg);
@@ -1796,6 +1856,7 @@ img:hover {
     z-index: 1;
     background: #fff;
     padding: 0;
+    overflow: hidden;
   }
   .list-items-container {
     display: flex;
