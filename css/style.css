@@ -436,7 +436,6 @@ a {
   transition: all 0.5s;
   border: 2px solid #be2e20;
   font-weight: 500;
-}rder: 2px solid #532622;
 }
 
 a.get-started-btn-top:hover {
@@ -2077,7 +2076,22 @@ img:hover {
     display: inline-block;
   }
   .subscribe-after {
-    top: 94%;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: #e74c3c;
+    right: 4%;
+    top: 96%;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 39px;
+    text-align: center;
+    font-size: 27px;
+    padding: 0px;
+    border: none;
+    display: inline-block;
+    transform: scale(1);
+    transition: all 0.5s;
   }
 
   /*start icon image*/
