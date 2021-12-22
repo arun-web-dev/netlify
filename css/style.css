@@ -734,15 +734,16 @@ section#home-main-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 10%;
 }
 .services-content-scroll-btn {
   width: 3px;
   height: 50px;
   border: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-left: 20px;
-  background: #999999;
+  background: #2f2f2f;
   cursor: pointer;
 }
 
@@ -805,9 +806,12 @@ section#home-main-section {
   display: flex;
   flex-direction: column;
   background: #202020;
-  padding: 100px 40px;
+  padding: 100px 80px;
+  padding-left: 120px;
   position: relative;
+  flex: 110%;
 }
+
 .services-content-items span {
   right: -3.5%;
 }
@@ -859,14 +863,14 @@ section#home-main-section {
 }
 
 .services-content-items h3 {
-  margin-top: 20px;
+  margin-top: 35px;
   color: #e74c3c;
   font-weight: 500;
 }
-
 .services-content-items p {
-  margin-top: 20px;
+  margin-top: 10px;
   color: #999999;
+  font-size: 0.8rem;
 }
 
 .recent {
@@ -926,6 +930,7 @@ section#home-main-section {
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 40px;
 }
 .recent-content-links button {
   margin: 10px;
@@ -939,17 +944,11 @@ section#home-main-section {
   transform: scale3d(1, 1, 1);
   transition: all 0.5s;
   background: #fff;
+  font-weight: 600;
 }
 .recent-content-links button:hover,
 .recent-content-links .active2 {
-  background: #2c1c1f;
-  color: #fff;
-  transition: all 0.5s;
-  transform: scale3d(1.1, 1.1, 1.1);
-}
-.recent-content-links button:active {
-  transform: scale(0.95);
-  transition: all 0.5s;
+  color: #e85849;
 }
 
 .recent-content-links p {
@@ -959,22 +958,21 @@ section#home-main-section {
 }
 
 .recent-content-images {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .flex-first {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .flex-first > div {
-  max-width: 300px;
-  height: auto;
+  max-width: 100%;
+  height: 350px;
   position: relative;
 }
 .flex-second > div {
-  max-width: 300px;
-  height: auto;
+  max-width: 100%;
+  height: 350px;
   position: relative;
 }
 .recent-content-overlay {
@@ -1015,13 +1013,14 @@ section#home-main-section {
   margin-top: 10px;
 }
 .flex-second {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .recent-content-images img {
   width: 100%;
+  height: 350px;
+  display: inline-block;
 }
 .recent-content-images img:hover {
   transform: scale(1);
@@ -1840,14 +1839,6 @@ input.textarea-content {
 .social-media-content {
   display: flex;
   justify-content: space-between;
-}
-img {
-  transform: scale(1);
-  transition: all 0.5s;
-}
-img:hover {
-  transform: scale(1.1);
-  transition: all 0.5s;
 }
 
 /*media queries 768px start */
