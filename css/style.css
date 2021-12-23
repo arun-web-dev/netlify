@@ -274,7 +274,6 @@ a {
 }
 
 .nav-links-menu a:active {
-  transform: scale3d(0.95, 0.95, 0.95);
   transition: all 0.5s;
 }
 
