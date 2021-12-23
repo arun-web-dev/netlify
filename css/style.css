@@ -1113,8 +1113,8 @@ button.small-circle-read-more.gray-circle {
 
 .radio-active1 {
   position: relative;
-  animation: radio-active1 6s ease-in 1s infinite;
-  -webkit-animation: radio-active1 6s ease-in 1s infinite;
+  animation: radio-active1 5s ease-in 1s infinite;
+  -webkit-animation: radio-active1 5s ease-in 1s infinite;
 }
 
 @keyframes radio-active1 {
@@ -1124,7 +1124,7 @@ button.small-circle-read-more.gray-circle {
   25% {
     transform: translateX(0);
   }
-  50% {
+  75% {
     transform: translateX(0);
   }
 
