@@ -754,16 +754,24 @@ section#home-main-section {
 
 .services-active1 {
   position: relative;
-  animation: services-active1 0.5s ease-in 2s;
-  -webkit-animation: services-active1 0.5s ease-in;
+  animation: services-active1 5s ease-in 1s infinite;
+  -webkit-animation: services-active1 5s ease-in 1s infinite;
 }
 
 @keyframes services-active1 {
   0% {
     transform: translateY(-100%);
   }
-  100% {
+  25% {
     transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(100%);
   }
 }
 
@@ -1105,16 +1113,23 @@ button.small-circle-read-more.gray-circle {
 
 .radio-active1 {
   position: relative;
-  animation: radio-active1 0.5s ease-in 2s;
-  -webkit-animation: radio-active1 0.5s ease-in;
+  animation: radio-active1 7s ease-in 2s infinite;
+  -webkit-animation: radio-active1 7s ease-in 2s infinite;
 }
 
 @keyframes radio-active1 {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-150%);
   }
-  100% {
+  25% {
     transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(150%);
   }
 }
 
