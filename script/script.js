@@ -3,7 +3,13 @@ const homeMainBefore = document.querySelector("#home-main-before");
 
 const homeMainAfter = document.querySelector("#home-main-after");
 
+const arrowLeft = document.querySelectorAll(".home-main-before");
+const arrowRight = document.querySelectorAll(".home-main-after");
+
 homeMainAfter.addEventListener("click", function () {
+  homeMainAfter.classList.toggle("arrow-active");
+  homeMainBefore.classList.toggle("arrow-active");
+
   if (homeMain.classList.contains("from-left")) {
     homeMain.classList.toggle("from-left1");
   } else {
@@ -13,6 +19,8 @@ homeMainAfter.addEventListener("click", function () {
   }
 });
 homeMainBefore.addEventListener("click", function () {
+  homeMainAfter.classList.toggle("arrow-active");
+  homeMainBefore.classList.toggle("arrow-active");
   if (homeMain.classList.contains("from-right")) {
     homeMain.classList.remove("from-right");
     homeMain.classList.remove("from-left");
