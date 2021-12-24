@@ -65,7 +65,6 @@ const hamburger = document.querySelector(".hamburger");
 const navlinks = document.querySelector(".nav-links-menu");
 const btns = document.getElementsByClassName("menu_button");
 const links = document.querySelectorAll(".nav-links-menu li");
-const link = document.querySelectorAll(".nav-links-menu a ");
 
 hamburger.addEventListener("click", () => {
   navlinks.classList.toggle("nav-active");
@@ -81,7 +80,7 @@ for (const btn of btns) {
     hamburger.classList.remove("change");
   });
 }
-window.addEventListener("scroll", home_main_function);
+
 window.addEventListener("scroll", section_function);
 window.addEventListener("scroll", history_function);
 window.addEventListener("scroll", services_function);
@@ -94,16 +93,6 @@ window.addEventListener("scroll", integration_function);
 window.addEventListener("scroll", blog_function);
 window.addEventListener("scroll", keepInTouch_function);
 window.addEventListener("scroll", subscribe_function);
-
-function home_main_function() {
-  const triggerBottom = (window.innerHeight / 5) * 4;
-  const homeStart = homeContent.getBoundingClientRect().top;
-  if (homeStart < triggerBottom) {
-    link[0].classList.add("active");
-  } else {
-    link[0].classList.remove("active");
-  }
-}
 
 function section_function() {
   const triggerBottom = (window.innerHeight / 5) * 4;
@@ -122,15 +111,11 @@ function history_function() {
   const historyStart = historyContent.getBoundingClientRect().top;
   if (historyStart < triggerBottom) {
     fromTopHistory();
-    for (let linksa of link) {
-      linksa.classList.remove("active");
-    }
-    link[1].classList.add("active");
   } else {
     historyContent.classList.remove("from-top");
-    link[1].classList.remove("active");
   }
 }
+/*from-top-animation */
 function fromTopHistory() {
   historyContent.classList.add("from-top");
 }
@@ -155,13 +140,8 @@ function recent_function() {
   const recentStart = recentContent.getBoundingClientRect().top;
   if (recentStart < triggerBottom) {
     fromTopRecent();
-    for (let linksa of link) {
-      linksa.classList.remove("active");
-    }
-    link[2].classList.add("active");
   } else {
     recentContent.classList.remove("from-top");
-    link[2].classList.remove("active");
   }
 }
 function fromTopRecent() {
@@ -204,13 +184,8 @@ function pricing_function() {
   const pricingStart = pricingSectionContainer.getBoundingClientRect().top;
   if (pricingStart < triggerBottom) {
     fromTopPricing();
-    for (let linksa of link) {
-      linksa.classList.remove("active");
-    }
-    link[3].classList.add("active");
   } else {
     pricingSectionContainer.classList.remove("from-top");
-    link[3].classList.remove("active");
   }
 }
 function fromTopPricing() {
@@ -223,13 +198,8 @@ function our_function() {
   const ourFunctionStart = ourTeamContainer.getBoundingClientRect().top;
   if (ourFunctionStart < triggerBottom) {
     fromTopOur();
-    for (let linksa of link) {
-      linksa.classList.remove("active");
-    }
-    link[4].classList.add("active");
   } else {
     ourTeamContainer.classList.remove("from-top");
-    link[4].classList.remove("active");
   }
 }
 function fromTopOur() {
@@ -257,13 +227,8 @@ function blog_function() {
   const blogStart = ourBlogContainer.getBoundingClientRect().top;
   if (blogStart < triggerBottom) {
     fromTopOurBlog();
-    for (let linksa of link) {
-      linksa.classList.remove("active");
-    }
-    link[5].classList.add("active");
   } else {
     ourBlogContainer.classList.remove("from-top");
-    link[5].classList.remove("active");
   }
 }
 function fromTopOurBlog() {
@@ -276,13 +241,8 @@ function keepInTouch_function() {
   const keepInTouchStart = keepInTouchContianer.getBoundingClientRect().top;
   if (keepInTouchStart < triggerBottom) {
     fromTopKeepInTouch();
-    for (let linksa of link) {
-      linksa.classList.remove("active");
-    }
-    link[6].classList.add("active");
   } else {
     keepInTouchContianer.classList.remove("from-top");
-    link[6].classList.remove("active");
   }
 }
 function fromTopKeepInTouch() {

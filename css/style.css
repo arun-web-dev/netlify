@@ -300,17 +300,6 @@ a {
   left: 10%;
 }
 
-/* .nav-links-menu a:hover,
-.active {
-  background: #2c1c1f;
-  color: #fff;
-  transition: all 0.5s;
-  transform: scale3d(1.2, 1.2, 1.2);
-} */
-/* .nav-links-menu a:active {
-  transform: scale(0.95);
-  transition: all 0.5s;
-} */
 .home {
   background: url(../images/homebg.webp) no-repeat center center;
   background-size: cover;
