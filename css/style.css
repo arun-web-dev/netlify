@@ -250,8 +250,8 @@ a {
   text-transform: uppercase;
   font-weight: 400;
   color: rgb(255, 255, 255);
-  font-size: 1rem;
-  margin-right: 20px;
+  font-size: 14px;
+  margin: 0px 20px 0;
   padding: 5px;
   transition: all 0.5s ease 0s;
   border-radius: 2px;
@@ -259,6 +259,7 @@ a {
   display: inline-block;
   position: relative;
   transition: all 0.5s;
+  font-weight: 500;
 }
 
 .nav-link-ltr.active {
@@ -446,12 +447,12 @@ a {
 }
 
 .home-main p {
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 400;
   margin-top: 30px;
-  padding-left: 125px;
-  padding-right: 125px;
-  color: #999999;
+  padding-left: 130px;
+  padding-right: 130px;
+  color: #cbc6c0;
 }
 
 .home-button {
@@ -734,6 +735,56 @@ section#home-main-section {
   background: #2f2f2f;
   cursor: pointer;
 }
+
+/* /* .bg-animation-first {
+  animation: bg-first-animation 5s ease-in infinite;
+}
+
+@keyframes bg-first-animation {
+  /* 0% {
+    background: #e74d3c;
+  }
+
+  50% {
+    background: #2f2f2f;
+  }
+
+  100% {
+    background: #e74d3c;
+  } */
+/* } */
+
+/* .bg-animation-second {
+  animation: bg-second-animation 5s ease-in infinite;
+}
+
+@keyframes bg-second-animation {
+  0% {
+    background: #2f2f2f;
+  }
+  100% {
+    background: #2f2f2f;
+  }
+}
+
+.bg-animation-third {
+  animation: bg-third-animation 2s ease-in infinite 5s;
+}
+
+@keyframes bg-third-animation {
+  50% {
+    background: #e74d3c;
+  }
+}
+.bg-animation-first {
+  animation: bg-first-animation 2s ease-in infinite;
+}
+
+@keyframes bg-first-animation {
+  50% {
+    background: #e74d3c;
+  }
+} */
 
 .scroll-btn-active {
   background: #e74c3c;
