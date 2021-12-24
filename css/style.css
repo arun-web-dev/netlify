@@ -282,7 +282,6 @@ a {
   color: #e74d3c;
   transition: all 0.5s;
 }
-
 .nav-links-menu a::before {
   transition: 300ms;
   height: 1px;
