@@ -1297,13 +1297,14 @@ button.small-circle-read-more.gray-circle {
 }
 
 .list-items-content h2 {
-  color: #fff;
-  margin-top: 25px;
+  color: #f4f5f9;
+  margin-top: 35px;
+  font-size: 30px;
 }
 
 .list-items-content h3 {
-  color: #fff;
-  margin-top: 5px;
+  color: #f4f5f9;
+  margin-top: 2px;
   font-weight: 400;
 }
 
@@ -2245,6 +2246,12 @@ a.get-started-btn-footer:hover {
     margin: 0 auto;
     margin-top: 30px;
     position: relative;
+  }
+
+  .case-study-top-content h3 {
+    color: #6a6a6a;
+    font-size: 16px;
+    margin-top: 50px;
   }
   .case-study-image {
     position: relative;
