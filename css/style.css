@@ -605,8 +605,8 @@ section#home-main-section {
   text-align: center;
   padding: 100px 0;
   position: relative;
+  border-bottom: 1px solid #0000001a;
 }
-
 .second-section-main {
   max-width: 80%;
   height: auto;
