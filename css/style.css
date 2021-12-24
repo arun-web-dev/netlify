@@ -414,11 +414,16 @@ h2 {
   color: #fff;
 }
 
+span.home-paragraph {
+  font-size: 1.5rem;
+  color: #f4f5f9;
+}
 .home-main h1 {
-  font-size: 1rem;
+  font-size: 4.5rem;
   word-spacing: 4px;
-  font-weight: 400;
-  margin-bottom: 10px;
+  font-weight: 600;
+  margin-top: 14px;
+  color: #f4f5f9;
 }
 
 .home-main h2 {
@@ -804,7 +809,7 @@ section#home-main-section {
   }
 } */
 
-.scroll-btn-active {
+.scroll-btn-active-new {
   background: #e74c3c;
 }
 
@@ -1153,7 +1158,11 @@ section#home-main-section {
   transition: all 0.5s ease 0s;
 }
 
-button.small-circle-read-more.gray-circle {
+/* button.small-circle-read-more.gray-circle {
+  background: #e74c3c;
+} */
+
+button.small-circle-read-more.gray-circle-new {
   background: #e74c3c;
 }
 
@@ -2063,10 +2072,21 @@ a.get-started-btn-footer:hover {
   display: flex;
   justify-content: space-between;
 }
-
+.case-study-top-content h3 {
+  color: #6a6a6a;
+  font-size: 16px;
+  margin-top: 15px;
+}
 /*media queries 768px start */
 
 @media screen and (max-width: 768px) {
+  span.home-paragraph {
+    font-size: 1rem;
+    color: #f4f5f9;
+  }
+  .home-main h1 {
+    font-size: 3rem;
+  }
   .services-content-items span {
     display: none;
   }
@@ -2183,7 +2203,7 @@ a.get-started-btn-footer:hover {
     flex: auto;
   }
   .recent {
-    padding: 50px 0;
+    padding: 50px 0 0;
   }
   .flex-first {
     display: flex;
@@ -2248,11 +2268,6 @@ a.get-started-btn-footer:hover {
     position: relative;
   }
 
-  .case-study-top-content h3 {
-    color: #6a6a6a;
-    font-size: 16px;
-    margin-top: 50px;
-  }
   .case-study-image {
     position: relative;
     margin: 0 auto;
@@ -2264,6 +2279,7 @@ a.get-started-btn-footer:hover {
     padding: 50px 0;
     background: rgb(244, 245, 249);
   }
+
   .case-study-idea-content {
     display: flex;
     flex-direction: column;
@@ -2506,11 +2522,11 @@ a.get-started-btn-footer:hover {
     transform: translate(-0%, -77%);
   }
   span.overlay-image {
-    width: 53px;
-    height: 53px;
+    width: 60px;
+    height: 60px;
     background: #d32525ad;
     display: inline-block;
-    transform: translate(0%, -143%);
+    transform: translate(-9%, -134%);
     border-radius: 50%;
     opacity: 0;
     transition: all 0.5s;
@@ -2544,6 +2560,14 @@ a.get-started-btn-footer:hover {
 
 /*media queries min width 769 and max width 1024px*/
 @media screen and (max-width: 1254px) and (min-width: 769px) {
+  .home-main h1 {
+    font-size: 3.2rem;
+  }
+  .nav-links-menu a {
+    font-size: 0.65rem;
+    margin: 0px 10px 0;
+    padding: 5px;
+  }
   .case-study-idea-content {
     display: flex;
     flex-direction: column;

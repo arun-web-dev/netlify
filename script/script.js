@@ -362,3 +362,39 @@ scrollBtns.forEach((sbtn) => {
     }
   });
 });
+
+// gray circle auto scroll animation
+var slideIndex = 0;
+showSlides();
+function showSlides() {
+  var i;
+  var dots = document.querySelectorAll(".small-circle-read-more");
+  slideIndex++;
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" gray-circle-new", "");
+  }
+  if (slideIndex > dots.length) {
+    slideIndex = 1;
+  }
+  dots[slideIndex - 1].className += " gray-circle-new";
+  setTimeout(showSlides, 5000);
+}
+
+var slideInexTop = 0;
+showSlidesTop();
+function showSlidesTop() {
+  var i;
+  var slides = document.querySelectorAll(".services-content-scroll-btn");
+  slideInexTop++;
+  for (i = 0; i < slides.length; i++) {
+    slides[i].className = slides[i].className.replace(
+      " scroll-btn-active-new",
+      ""
+    );
+  }
+  if (slideInexTop > slides.length) {
+    slideInexTop = 1;
+  }
+  slides[slideInexTop - 1].className += " scroll-btn-active-new";
+  setTimeout(showSlidesTop, 5000);
+}
