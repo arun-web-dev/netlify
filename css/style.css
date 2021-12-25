@@ -2115,9 +2115,9 @@ a.get-started-btn-footer:hover {
   }
   .arrow-icon {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    line-height: 48px;
+    width: 45px;
+    height: 45px;
+    line-height: 0;
     background: #f4f5f9;
     border-radius: 50%;
     text-align: center;
