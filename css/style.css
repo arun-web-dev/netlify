@@ -608,9 +608,8 @@ section#home-main-section {
   transition: all 0.5s;
 }
 .arrow-icon a i {
-  font-size: 1.5rem;
-  color: #e74c3c;
-  transition: all 0.5s;
+  color: rgb(231, 76, 60);
+  transition: all 0.5s ease 0s;
 }
 .arrow-icon-link {
   cursor: pointer;
@@ -913,17 +912,17 @@ section#home-main-section {
 
 .services-content-items-after-first {
   position: absolute;
-  top: 35%;
+  top: 30%;
 }
 
 .services-content-items-after-second {
   position: absolute;
-  top: 55%;
+  top: 50%;
 }
 
 .services-content-items-after-third {
   position: absolute;
-  top: 75%;
+  top: 70%;
 }
 .services-content-items h2 {
   color: #fff;
