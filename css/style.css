@@ -1004,11 +1004,12 @@ section#home-main-section {
 
 .recent-content-links {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 40px;
+  align-items: baseline;
 }
+
 .recent-content-links button {
   margin: 10px;
   border: none;
