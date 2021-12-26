@@ -706,6 +706,7 @@ section#home-main-section {
 
 .history-content img {
   max-width: 100%;
+  height: auto;
 }
 
 .history-content h2 {
@@ -1098,7 +1099,7 @@ section#home-main-section {
 }
 
 .recent-content-images img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   display: inline-block;
 }
@@ -1282,12 +1283,11 @@ button.small-circle-read-more.gray-circle-new {
   width: 50%;
   flex: 0%;
 }
-
 .case-study-image img {
   display: inline-block;
   max-width: 100%;
+  height: auto;
 }
-
 .list-items {
   width: 100%;
   background: url(../images/counterbg.webp);
@@ -1718,6 +1718,9 @@ li:hover .single_team_img img {
   width: 211px;
   height: 101px;
   background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .int-flex-first {
@@ -1730,7 +1733,6 @@ li:hover .single_team_img img {
   margin-top: 70px;
 }
 .int-flex-first img {
-  padding: 15px;
   opacity: 0.3;
   max-width: 100%;
   height: auto;
@@ -2350,7 +2352,7 @@ a.get-started-btn-footer:hover {
   }
   .integration-image p {
     max-width: 100%;
-    height: auto;
+    height: 110px;
   }
 
   .int-flex-first img {
@@ -2599,6 +2601,7 @@ a.get-started-btn-footer:hover {
     z-index: 1;
     background: #fff;
     padding: 0;
+    margin-top: 20px;
   }
   .case-study-flex {
     display: flex;
@@ -2615,8 +2618,8 @@ a.get-started-btn-footer:hover {
   }
   .case-study-image img {
     display: inline-block;
-    max-width: 50%;
-    transform: scale(1.5);
+    max-width: 100%;
+    height: auto;
     margin-top: 25px;
   }
   .row-one {
