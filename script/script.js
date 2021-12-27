@@ -277,6 +277,7 @@ function fromTopSubscribeContent() {
 
 const bttn = document.querySelectorAll(".recent-content-links button");
 const product = document.querySelectorAll(".image-one");
+const recentDoc = document.querySelector(".recent-content-images");
 bttn.forEach((items) => {
   items.addEventListener("click", function () {
     for (let btn of bttn) {
@@ -285,11 +286,19 @@ bttn.forEach((items) => {
     items.classList.add("active2");
 
     product.forEach((show) => {
-      show.style.display = "none";
+      show.style.opacity = 0;
+      show.style.transform = "scale(0.9)";
+
       let products = items.textContent.toLowerCase();
-      if (show.getAttribute("data-att") === products || products === "all") {
-        show.style.display = "flex";
-      }
+      setTimeout(function () {
+        show.style.display = "none";
+        if (show.getAttribute("data-att") === products || products === "all") {
+          show.style.display = "flex";
+          show.style.flexDirection = "column ";
+          show.style.transform = "scale(1)";
+          show.style.opacity = 100;
+        }
+      }, 1000);
     });
   });
 });
@@ -297,6 +306,11 @@ bttn.forEach((items) => {
 // loading animation
 
 const loading = document.querySelectorAll(".list-items-content h2");
+let loadingfirst = loading[0].innerText;
+let loadingSecond = loading[1].innerText;
+let loadingThird = loading[2].innerText;
+let loadingFourth = loading[3].innerText;
+let loadingFivth = loading[4].innerText;
 let load = 0;
 let int = setInterval(blurring, 30);
 function blurring() {
@@ -309,7 +323,15 @@ function blurring() {
     loads.style.opacity = scale(loads, 0, 100, 0, 1);
   });
 }
+const loadingTimeout = setTimeout(loadingDone, 3976);
 
+function loadingDone() {
+  loading[0].innerText = loadingfirst;
+  loading[1].innerText = loadingSecond;
+  loading[2].innerText = loadingThird;
+  loading[3].innerText = loadingFourth;
+  loading[4].innerText = loadingFivth;
+}
 const scale = function scale(number, inMin, inMax, outMin, outMax) {
   return ((number - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 };

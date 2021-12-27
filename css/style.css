@@ -1049,11 +1049,13 @@ section#home-main-section {
   max-width: 100%;
   height: auto;
   position: relative;
+  transition: all 1s;
 }
 .flex-second > div {
   max-width: 100%;
   height: auto;
   position: relative;
+  transition: all 1s;
 }
 .recent-content-overlay {
   background: red;
@@ -1329,6 +1331,7 @@ button.small-circle-read-more.gray-circle-new {
   color: #f4f5f9;
   margin-top: 35px;
   font-size: 30px;
+  transition: all 0.1s ease-in;
 }
 
 .list-items-content h3 {
@@ -2231,6 +2234,13 @@ a.get-started-btn-footer:hover {
     display: flex;
     flex-direction: column;
   }
+
+  .image-one {
+    opacity: 1;
+    display: block;
+    transition: all 1s;
+  }
+
   .flex-second {
     display: flex;
     flex-direction: column;
