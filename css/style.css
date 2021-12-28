@@ -53,6 +53,10 @@ h2 {
   border: 2px solid #fff;
 }
 
+.logo a {
+  display: inherit;
+}
+
 .logo p:nth-child(1) {
   color: #4a4c55;
   font-weight: 800;
@@ -184,6 +188,32 @@ h2 {
 .from-right {
   animation: from-right 0.5s ease-in-out 0s;
   -webkit-animation: from-right 0.5s ease-in-out 0s;
+  transition: all 0.5s;
+  position: relative;
+}
+
+@keyframes from-right-infinite {
+  0% {
+    right: -100%;
+    transition: all 0.5s;
+  }
+
+  25% {
+    right: 0;
+  }
+
+  75% {
+    right: 0;
+  }
+
+  100% {
+    right: 100%;
+    transition: all 0.5s;
+  }
+}
+.from-right-infinite {
+  animation: from-right-infinite 5s ease-in-out infinite 1s;
+  -webkit-animation: from-right-infinite 5s ease-in-out infinite 1s;
   transition: all 0.5s;
   position: relative;
 }
@@ -1478,7 +1508,7 @@ a.get-started-btn-pricing:hover {
   height: 100%;
   position: absolute;
   left: 0;
-  bottom: -8%;
+  bottom: -23%;
   content: "";
   background: url(../images/teambg2.webp) no-repeat bottom center;
 }
@@ -1486,7 +1516,7 @@ a.get-started-btn-pricing:hover {
 .our-team-relative {
   position: relative;
   width: 80%;
-  margin: 0 auto;
+  margin-left: 8%;
 }
 
 .our-team-top {
@@ -1497,7 +1527,7 @@ a.get-started-btn-pricing:hover {
 }
 .our-team-content {
   margin: 0 auto;
-  padding-bottom: 150px;
+  padding-bottom: 195px;
 }
 .our-team-content h2 {
   color: #fff;
@@ -1857,6 +1887,13 @@ li:hover .single_team_img img {
   flex: 50%;
 }
 
+.box-flex-top a {
+  text-transform: none;
+  color: #f4f5f9;
+  font-style: italic;
+  font-weight: 400;
+}
+
 .flextop-image {
   width: 300px;
   flex: 25%;
@@ -2016,7 +2053,7 @@ input.textarea-content {
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;
-  padding: 1px 0px 100px;
+  padding: 1px 0px 2px;
 }
 .subscribe-container {
   width: 80%;
@@ -2109,6 +2146,11 @@ a.get-started-btn-footer:hover {
     font-size: 1rem;
     color: #f4f5f9;
   }
+
+  .case-study-content p {
+    padding: 0 50px;
+  }
+
   .home-main h1 {
     font-size: 3rem;
   }
@@ -2267,9 +2309,6 @@ a.get-started-btn-footer:hover {
     padding-bottom: 1px;
   }
 
-  .wrap-last {
-    padding: 50px 0;
-  }
   .integration {
     padding: 50px 0;
   }
@@ -2294,7 +2333,7 @@ a.get-started-btn-footer:hover {
   }
   .case-study-flex {
     display: block;
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
     margin-top: 30px;
     position: relative;
@@ -2468,9 +2507,10 @@ a.get-started-btn-footer:hover {
     height: 100%;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -9%;
     content: "";
     background: url(../images/teambg2.webp);
+    background-size: cover;
   }
   .main_team ul li:nth-child(1) {
     width: 15%;
@@ -2558,7 +2598,7 @@ a.get-started-btn-footer:hover {
     height: 60px;
     background: #d32525ad;
     display: inline-block;
-    transform: translate(-9%, -134%);
+    transform: translate(-0%, -134%);
     border-radius: 50%;
     opacity: 0;
     transition: all 0.5s;
@@ -2713,5 +2753,54 @@ a.get-started-btn-footer:hover {
     border-radius: 50%;
     opacity: 0;
     transition: all 0.5s;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .main_team ul li:nth-child(1) {
+    top: 81%;
+  }
+  .main_team ul li:nth-child(2) {
+    top: 71%;
+  }
+  .main_team ul li:nth-child(3) {
+    top: 62%;
+  }
+  .main_team ul li:nth-child(4) {
+    top: 55%;
+  }
+
+  .main_team ul li:nth-child(5) {
+    top: 50%;
+  }
+}
+
+@media screen and (max-width: 599px) and (min-width: 300px) {
+  .main_team ul li:nth-child(1) {
+    top: 85%;
+  }
+  .main_team ul li:nth-child(2) {
+    top: 77%;
+  }
+
+  .main_team ul li:nth-child(3) {
+    top: 70%;
+  }
+
+  .main_team ul li:nth-child(4) {
+    top: 64%;
+  }
+
+  .main_team ul li:nth-child(5) {
+    top: 59%;
+  }
+}
+@media screen and (max-width: 1159px) and (min-width: 1060px) {
+  li .single_team_text {
+    transform: translate(1%, -93%);
+  }
+
+  span.overlay-image {
+    transform: translate(0%, -119%);
   }
 }
