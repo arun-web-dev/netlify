@@ -181,6 +181,25 @@ function list_function() {
   } else {
     listItemsContainer.classList.remove("from-top");
   }
+
+  if (listStart > triggerBottom) {
+    counters.forEach((counter) => {
+      counter.innerText = "0";
+
+      const updateCounter = () => {
+        const target = +counter.getAttribute("data-att");
+        const c = +counter.innerText;
+        const increment = target / 300;
+        if (c < target) {
+          counter.innerText = `${Math.ceil(c + increment)}`;
+          setTimeout(updateCounter, 10);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCounter();
+    });
+  }
 }
 function fromTopList() {
   listItemsContainer.classList.add("from-top");
@@ -305,33 +324,25 @@ bttn.forEach((items) => {
 
 // loading animation
 
-const loading = document.querySelectorAll(".list-items-content h2");
-let loadingfirst = loading[0].innerText;
-let loadingSecond = loading[1].innerText;
-let loadingThird = loading[2].innerText;
-let loadingFourth = loading[3].innerText;
-let loadingFivth = loading[4].innerText;
-let load = 0;
-let int = setInterval(blurring, 30);
-function blurring() {
-  load++;
-  if (load > 99) {
-    clearInterval(int);
-  }
-  loading.forEach((loads) => {
-    loads.innerText = load;
-    loads.style.opacity = scale(loads, 0, 100, 0, 1);
-  });
-}
-const loadingTimeout = setTimeout(loadingDone, 3976);
+const counters = document.querySelectorAll(".counter");
 
-function loadingDone() {
-  loading[0].innerText = loadingfirst;
-  loading[1].innerText = loadingSecond;
-  loading[2].innerText = loadingThird;
-  loading[3].innerText = loadingFourth;
-  loading[4].innerText = loadingFivth;
-}
+counters.forEach((counter) => {
+  counter.innerText = "0";
+
+  const updateCounter = () => {
+    const target = +counter.getAttribute("data-att");
+    const c = +counter.innerText;
+    const increment = target / 200;
+    if (c < target) {
+      counter.innerText = `${Math.ceil(c + increment)}`;
+      setTimeout(updateCounter, 10);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCounter();
+});
+
 const scale = function scale(number, inMin, inMax, outMin, outMax) {
   return ((number - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 };
