@@ -6,6 +6,19 @@ const homeMainAfter = document.querySelector("#home-main-after");
 const arrowLeft = document.querySelectorAll(".home-main-before");
 const arrowRight = document.querySelectorAll(".home-main-after");
 
+const header = document.getElementById("header");
+const headerNav = document.getElementById("header-nav");
+
+window.addEventListener("scroll", scrollFunction);
+
+function scrollFunction() {
+  if (scrollY > header.offsetHeight + 150) {
+    header.classList.add("top");
+  } else {
+    header.classList.remove("top");
+  }
+}
+
 homeMainAfter.addEventListener("click", function () {
   homeMainAfter.classList.toggle("arrow-active");
   homeMainBefore.classList.toggle("arrow-active");

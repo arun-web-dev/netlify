@@ -37,8 +37,17 @@ h2 {
 }
 .header {
   position: relative;
+  transition: all 0.5s;
 }
 
+.sticky.top {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  background: #262628;
+}
+
+.top .header-nav {
+  padding: 5px 12px;
+}
 .sticky {
   position: -webkit-sticky;
   position: sticky;
@@ -278,6 +287,7 @@ h2 {
   padding: 12px;
   max-width: 80%;
   margin: 0 auto;
+  transition: all 0.2s;
 }
 
 .nav-links-menu {
