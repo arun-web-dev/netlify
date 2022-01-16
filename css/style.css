@@ -2152,6 +2152,9 @@ a.get-started-btn-footer:hover {
 /*media queries 768px start */
 
 @media screen and (max-width: 768px) {
+  .top .header-nav {
+    padding: 12px;
+  }
   span.home-paragraph {
     font-size: 1rem;
     color: #f4f5f9;
