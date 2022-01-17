@@ -35,6 +35,7 @@ homeMainBefore.addEventListener("click", function () {
   homeMainAfter.classList.toggle("arrow-active");
   homeMainBefore.classList.toggle("arrow-active");
   if (homeMain.classList.contains("from-right")) {
+    homeMain.classList.remove("from-right-infinite");
     homeMain.classList.remove("from-right");
     homeMain.classList.remove("from-left");
     homeMain.classList.remove("from-left1");
