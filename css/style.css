@@ -2638,7 +2638,7 @@ a.get-started-btn-footer:hover {
   .nav-links-menu a {
     font-size: 0.8rem;
     margin-left: 10px;
-    margin-top: 0px;
+    margin-top: 5px;
   }
 }
 /*media queries 768px end*/
