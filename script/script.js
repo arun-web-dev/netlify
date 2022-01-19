@@ -1,4 +1,5 @@
 "use sctrict";
+
 const homeMainBefore = document.querySelector("#home-main-before");
 
 const homeMainAfter = document.querySelector("#home-main-after");
@@ -20,8 +21,8 @@ function scrollFunction() {
 }
 
 homeMainAfter.addEventListener("click", function () {
-  homeMainAfter.classList.toggle("arrow-active");
-  homeMainBefore.classList.toggle("arrow-active");
+  homeMainAfter.classList.add("arrow-active");
+  homeMainBefore.classList.remove("arrow-active");
 
   if (homeMain.classList.contains("from-left")) {
     homeMain.classList.toggle("from-left1");
@@ -32,8 +33,8 @@ homeMainAfter.addEventListener("click", function () {
   }
 });
 homeMainBefore.addEventListener("click", function () {
-  homeMainAfter.classList.toggle("arrow-active");
-  homeMainBefore.classList.toggle("arrow-active");
+  homeMainAfter.classList.remove("arrow-active");
+  homeMainBefore.classList.add("arrow-active");
   if (homeMain.classList.contains("from-right")) {
     homeMain.classList.remove("from-right-infinite");
     homeMain.classList.remove("from-right");
@@ -85,7 +86,7 @@ const subscribeContainerContent = document.getElementById(
 
 const hamburger = document.querySelector(".hamburger");
 const navlinks = document.querySelector(".nav-links-menu");
-const btns = document.getElementsByClassName("menu_button");
+const btns = document.querySelectorAll(".menu_button");
 const links = document.querySelectorAll(".nav-links-menu li");
 
 hamburger.addEventListener("click", () => {
@@ -97,12 +98,15 @@ for (const btn of btns) {
   btn.addEventListener("click", function () {
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+    setTimeout(() => {
+      this.className += " active";
+    }, 1000);
     navlinks.classList.remove("nav-active");
     hamburger.classList.remove("change");
   });
 }
 
+window.addEventListener("scroll", home_function);
 window.addEventListener("scroll", section_function);
 window.addEventListener("scroll", history_function);
 window.addEventListener("scroll", services_function);
@@ -116,6 +120,19 @@ window.addEventListener("scroll", blog_function);
 window.addEventListener("scroll", keepInTouch_function);
 window.addEventListener("scroll", subscribe_function);
 
+function home_function() {
+  const triggerBottom = (window.innerHeight / 5) * 4;
+  const homeStart = homeContent.getBoundingClientRect().top;
+  if (homeStart < triggerBottom) {
+    for (let btn of btns) {
+      btn.classList.remove("active");
+    }
+    btns[0].classList.add("active");
+  } else {
+    sectionContent.classList.remove("from-top");
+    btns[0].classList.remove("active");
+  }
+}
 function section_function() {
   const triggerBottom = (window.innerHeight / 5) * 4;
   const sectionStart = sectionContent.getBoundingClientRect().top;
@@ -133,8 +150,13 @@ function history_function() {
   const historyStart = historyContent.getBoundingClientRect().top;
   if (historyStart < triggerBottom) {
     fromTopHistory();
+    for (let btn of btns) {
+      btn.classList.remove("active");
+    }
+    btns[1].classList.add("active");
   } else {
     historyContent.classList.remove("from-top");
+    btns[1].classList.remove("active");
   }
 }
 /*from-top-animation */
@@ -162,8 +184,13 @@ function recent_function() {
   const recentStart = recentContent.getBoundingClientRect().top;
   if (recentStart < triggerBottom) {
     fromTopRecent();
+    for (let btn of btns) {
+      btn.classList.remove("active");
+    }
+    btns[2].classList.add("active");
   } else {
     recentContent.classList.remove("from-top");
+    btns[2].classList.remove("active");
   }
 }
 function fromTopRecent() {
@@ -225,8 +252,13 @@ function pricing_function() {
   const pricingStart = pricingSectionContainer.getBoundingClientRect().top;
   if (pricingStart < triggerBottom) {
     fromTopPricing();
+    for (let btn of btns) {
+      btn.classList.remove("active");
+    }
+    btns[3].classList.add("active");
   } else {
     pricingSectionContainer.classList.remove("from-top");
+    btns[3].classList.remove("active");
   }
 }
 function fromTopPricing() {
@@ -239,8 +271,13 @@ function our_function() {
   const ourFunctionStart = ourTeamContainer.getBoundingClientRect().top;
   if (ourFunctionStart < triggerBottom) {
     fromTopOur();
+    for (let btn of btns) {
+      btn.classList.remove("active");
+    }
+    btns[4].classList.add("active");
   } else {
     ourTeamContainer.classList.remove("from-top");
+    btns[4].classList.remove("active");
   }
 }
 function fromTopOur() {
@@ -268,8 +305,13 @@ function blog_function() {
   const blogStart = ourBlogContainer.getBoundingClientRect().top;
   if (blogStart < triggerBottom) {
     fromTopOurBlog();
+    for (let btn of btns) {
+      btn.classList.remove("active");
+    }
+    btns[5].classList.add("active");
   } else {
     ourBlogContainer.classList.remove("from-top");
+    btns[5].classList.remove("active");
   }
 }
 function fromTopOurBlog() {
@@ -282,8 +324,16 @@ function keepInTouch_function() {
   const keepInTouchStart = keepInTouchContianer.getBoundingClientRect().top;
   if (keepInTouchStart < triggerBottom) {
     fromTopKeepInTouch();
+    for (let btn of btns) {
+      btn.classList.remove("active");
+    }
+    for (let btn of btns) {
+      btn.classList.remove("active");
+    }
+    btns[6].classList.add("active");
   } else {
     keepInTouchContianer.classList.remove("from-top");
+    btns[6].classList.remove("active");
   }
 }
 function fromTopKeepInTouch() {
@@ -331,7 +381,7 @@ bttn.forEach((items) => {
           show.style.transform = "scale(1)";
           show.style.opacity = 100;
         }
-      }, 1000);
+      }, 500);
     });
   });
 });
@@ -427,7 +477,7 @@ function showSlides() {
   setTimeout(showSlides, 5000);
 }
 
-var slideInexTop = 0;
+let slideInexTop = 0;
 showSlidesTop();
 function showSlidesTop() {
   var i;
