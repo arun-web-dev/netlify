@@ -776,9 +776,10 @@ section#home-main-section {
   transition: all 0.5s;
 }
 
-.second-section-main h3 {
+.second-section-main h2 {
   margin-top: 20px;
   color: #6a6a6a;
+  font-size: 18px;
 }
 
 .small-line {
@@ -2096,7 +2097,6 @@ p.image-active:hover {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #999999;
 }
 .keepInTouch-right-content {
   width: 55%;

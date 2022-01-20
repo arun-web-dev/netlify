@@ -618,8 +618,11 @@ function showSuccess(input) {
   formControl.className = "form-control  success";
   btnEl.className = "form-control success";
   setTimeout(() => {
-    btnEl.className = "form-control";
-  }, 5000);
+    btnEl.className = "form-control button-form-control";
+    var inputs = document.querySelectorAll("input");
+
+    inputs.forEach((input1) => (input1.value = ""));
+  }, 2000);
 }
 
 //check email is valid
