@@ -683,6 +683,7 @@ section#home-main-section {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
 }
 .arrow-icon {
   position: absolute;
@@ -836,7 +837,21 @@ section#home-main-section {
   text-align: right;
   background: #202020;
   overflow: hidden;
+  height: 666px;
 }
+
+.services-scroll-slide {
+  transform: translateY(0);
+}
+
+.services-scroll-slide-second {
+  transform: translateY(-100%);
+}
+
+.services-scroll-slide-third {
+  transform: translateY(-200%);
+}
+
 .services-content-scroll {
   background: #202020;
   display: flex;
@@ -908,7 +923,7 @@ section#home-main-section {
 .scroll-btn-active-new {
   background: #e74c3c;
 }
-
+/* 
 .services-active1 {
   position: relative;
   animation: services-active1 5s ease-in 1s infinite;
@@ -960,7 +975,7 @@ section#home-main-section {
   100% {
     transform: translateY(0);
   }
-}
+} */
 
 .services-content-image {
   background: url(../images/IPAD.webp);
@@ -977,6 +992,7 @@ section#home-main-section {
   padding-right: 100px;
   position: relative;
   flex: 110%;
+  transition: all 1s;
 }
 
 .services-content-items span {
@@ -1213,6 +1229,27 @@ section#home-main-section {
   overflow: hidden;
 }
 
+/*case study scroll animation start*/
+.case-study-scroll-content {
+  position: relative;
+  height: 388px;
+  transition: all 0.5s;
+  left: 0%;
+}
+
+.case-study-top-content {
+  position: absolute;
+  top: 0;
+  transform: translateX(0);
+}
+.case-study-top-content.csc-second {
+  transform: translateX(150%);
+}
+.case-study-top-content.csc-third {
+  transform: translateX(300%);
+}
+/*case study scroll animation end*/
+
 .case-study-heading h2 {
   color: #6a6a6a;
 }
@@ -1246,7 +1283,7 @@ section#home-main-section {
 .small-circle-read-more {
   width: 10px;
   height: 10px;
-  background: #f4f5f9;
+  background: #c9cacf;
   position: relative;
   border-radius: 50%;
   display: inline-block;
@@ -2875,5 +2912,33 @@ a.get-started-btn-footer:hover {
 
   span.overlay-image {
     transform: translate(0%, -119%);
+  }
+}
+@media screen and (max-width: 980px) and (min-width: 769px) {
+  .services-content {
+    display: flex;
+    text-align: right;
+    background: #202020;
+    overflow: hidden;
+    height: 730px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .services-content {
+    display: flex;
+    text-align: right;
+    background: #202020;
+    overflow: hidden;
+    height: 700px;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 580px) {
+  .services-content {
+    display: flex;
+    text-align: right;
+    background: #202020;
+    overflow: hidden;
+    height: 600px;
   }
 }
