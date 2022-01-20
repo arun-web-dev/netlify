@@ -21,9 +21,6 @@ function scrollFunction() {
 }
 
 homeMainAfter.addEventListener("click", function () {
-  homeMainAfter.classList.add("arrow-active");
-  homeMainBefore.classList.remove("arrow-active");
-
   const slideEl = document.querySelectorAll(".animi-from");
   slideEl[0].classList.remove("animi-slide-infinite");
 
@@ -43,8 +40,6 @@ homeMainAfter.addEventListener("click", function () {
   }
 });
 homeMainBefore.addEventListener("click", function () {
-  homeMainAfter.classList.remove("arrow-active");
-  homeMainBefore.classList.add("arrow-active");
   const slideEl = document.querySelectorAll(".animi-from");
   if (
     slideEl[0].classList.contains("animi-slide-first") &&
@@ -598,3 +593,93 @@ function showSlidesServices(n) {
     });
   }
 }
+
+//form validation
+
+const form = document.getElementById("form");
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const password2 = document.getElementById("password2");
+
+///show input error message
+function showError(input, message) {
+  const formControl = input.parentElement;
+  formControl.className = "form-control error";
+  const small = formControl.querySelector("small");
+  small.innerText = message;
+}
+
+//show success outline
+
+function showSuccess(input) {
+  const formControl = input.parentElement;
+  const btnEl = document.querySelector(".button-form-control");
+  formControl.className = "form-control  success";
+  btnEl.className = "form-control success";
+  setTimeout(() => {
+    btnEl.className = "form-control";
+  }, 5000);
+}
+
+//check email is valid
+function checkEmail(input) {
+  const re =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (re.test(input.value.trim())) {
+    showSuccess(input);
+  } else {
+    showError(input, "Email is not valid");
+  }
+}
+// check requeried fields function
+
+function checkRequired(inputArr) {
+  inputArr.forEach(function (input) {
+    if (input.value.trim() === "") {
+      showError(input, `${getFieldName(input)} is required`);
+    } else {
+      showSuccess(input);
+    }
+  });
+}
+// check input length
+
+function checkLength(input, min, max) {
+  if (input.value.length < min) {
+    showError(
+      input,
+      `${getFieldName(input)} must be atleast ${min} characters`
+    );
+  } else if (input.value.length > max) {
+    showError(
+      input,
+      `${getFieldName(input)} must be less than ${max} characters`
+    );
+  } else {
+    showSuccess(input);
+  }
+}
+
+//check passwords match
+
+function checkPasswordsMatch(input1, input2) {
+  if (input1.value !== input2.value) {
+    showError(input2, "Password do not match");
+  }
+}
+
+// Get Field Name
+function getFieldName(input) {
+  return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+}
+
+//Evenlisteners
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  checkRequired([username, email, password, password2]);
+  checkLength(username, 3, 15);
+  checkLength(password, 6, 25);
+  checkEmail(email);
+});

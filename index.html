@@ -183,7 +183,7 @@
               </div>
             </div>
 
-            <div id="home-main-after" class="home-main-after arrow-active">
+            <div id="home-main-after" class="home-main-after">
               <a
                 href="#"
                 target="_self"
@@ -1218,23 +1218,43 @@
               </div>
             </div>
             <div class="keepInTouch-right-content">
-              <form>
-                <input type="text" placeholder="Name" required />
-                <input type="email" placeholder="Email" required />
-                <input type="text" placeholder="Subject" required />
-                <input
-                  type="text"
-                  class="textarea-content"
-                  placeholder="Message"
-                  required
-                />
-                <a
-                  href="#"
-                  target="_self"
-                  rel="noopener noreferrer"
-                  class="get-started-btn-touch"
-                  >SEND MESSAGE</a
-                >
+              <form id="form" class="form">
+                <div class="form-control">
+                  <input
+                    type="text"
+                    id="username"
+                    placeholder="Name"
+                    required
+                  />
+                  <small>Error message</small>
+                </div>
+                <div class="form-control">
+                  <input type="text" id="email" placeholder="Email" required />
+                  <small>Error message</small>
+                </div>
+                <div class="form-control">
+                  <input
+                    type="text"
+                    id="password"
+                    placeholder="Subject"
+                    required
+                  />
+                  <small>Error message</small>
+                </div>
+                <div class="form-control">
+                  <input
+                    class="textarea-content"
+                    type="text"
+                    id="password2"
+                    placeholder="Message"
+                    required
+                  />
+                  <small>Error message</small>
+                </div>
+                <div class="form-control button-form-control">
+                  <button class="get-started-btn-touch">Send message</button>
+                  <small class="small-sucess">Success</small>
+                </div>
               </form>
             </div>
           </div>

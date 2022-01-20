@@ -454,6 +454,20 @@ h2 {
   border-radius: 3px;
 }
 
+.home-main-after:hover {
+  background: #e74c3c;
+}
+.home-main-after:hover a {
+  color: #fff !important;
+}
+
+.home-main-before:hover {
+  background: #e74c3c;
+}
+.home-main-before:hover a {
+  color: #fff !important;
+}
+
 .arrow-active {
   background: #e74c3c;
 }
@@ -980,7 +994,7 @@ section#home-main-section {
 .services-content-image {
   background: url(../images/IPAD.webp);
   background-size: cover;
-  width: 100%;
+  width: 70%;
 }
 
 .services-content-items {
@@ -2106,8 +2120,10 @@ p.image-active:hover {
   border: 2px solid rgb(231, 76, 60);
   outline: 0px;
   font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
 }
-a.get-started-btn-touch:hover {
+.get-started-btn-touch:hover {
   background: rgb(60, 53, 53);
   transition: all 0.5s ease 0s;
   border: 2px solid rgb(60, 53, 53);
@@ -2941,4 +2957,53 @@ a.get-started-btn-footer:hover {
     overflow: hidden;
     height: 600px;
   }
+}
+
+/*form-validation start*/
+
+.form-control {
+  position: relative;
+}
+
+.form-control label {
+  color: #777;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control input:focus {
+  outline: 0;
+}
+
+/* .form-control.success input {
+  border-color: greenyellow;
+} */
+
+.form-control.error input {
+  border-color: #d92e2e;
+}
+
+.form-control small {
+  color: #d92e2e;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  border: 1px solid #d92e2e;
+  visibility: hidden;
+  padding: 2px 10px;
+  border-radius: 2px;
+}
+.form-control.error small {
+  visibility: visible;
+}
+
+.form-control.success .small-sucess {
+  visibility: visible;
+  display: inline-block;
+  bottom: -57%;
+  font-size: 20px;
+  padding: 5px 15px;
+  background: #4bb543;
+  color: white;
+  border: none;
 }
