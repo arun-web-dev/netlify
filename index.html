@@ -9,12 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Project BINO</title>
-    <script defer src="./script/script.js"></script>
-    <script
-      defer
-      src="https://kit.fontawesome.com/677ce6bf9e.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
 
   <body>
@@ -112,44 +106,83 @@
                 <i class="fas fa-chevron-left" aria-hidden="true"></i
               ></a>
             </div>
-            <div class="animi-from">
-              <div
-                class="home-main from-right from-right-infinite"
-                id="home-main"
-              >
-                <div class="home-main-content">
-                  <span class="home-paragraph"
-                    >Our Clients Are Our First Priority</span
-                  >
-                  <h1>WELCOME TO BINO</h1>
-                  <div class="small-circle"></div>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
-                </div>
-                <div class="home-button">
-                  <a
-                    href="#"
-                    target="_self"
-                    rel="noopener noreferrer"
-                    class="get-started-btn-top"
-                    >get started now</a
-                  >
+            <div class="home-slide-content">
+              <div class="animi-from animi-slide-infinite">
+                <div class="home-main" id="home-main">
+                  <div class="home-slide">
+                    <div class="home-main-content">
+                      <span class="home-paragraph"
+                        >Our Clients Are Our First Priority</span
+                      >
+                      <h1>WELCOME TO BINO</h1>
+                      <div class="small-circle"></div>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book.
+                      </p>
+                    </div>
+                    <div class="home-button">
+                      <a
+                        href="#"
+                        target="_self"
+                        rel="noopener noreferrer"
+                        class="get-started-btn-top"
+                        >get started now</a
+                      >
 
-                  <a
-                    href="#"
-                    target="_self"
-                    rel="noopener noreferrer"
-                    class="learn-more-btn-top"
-                    >learn more</a
-                  >
+                      <a
+                        href="#"
+                        target="_self"
+                        rel="noopener noreferrer"
+                        class="learn-more-btn-top"
+                        >learn more</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="animi-from animi-slide-second">
+                <div class="home-main" id="home-main">
+                  <div class="home-slide home-slide-second">
+                    <div class="home-main-content">
+                      <span class="home-paragraph"
+                        >Our Clients Are Our First Priority</span
+                      >
+                      <h1>WELCOME TO BINO</h1>
+                      <div class="small-circle"></div>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book.
+                      </p>
+                    </div>
+                    <div class="home-button">
+                      <a
+                        href="#"
+                        target="_self"
+                        rel="noopener noreferrer"
+                        class="get-started-btn-top"
+                        >get started now</a
+                      >
+
+                      <a
+                        href="#"
+                        target="_self"
+                        rel="noopener noreferrer"
+                        class="learn-more-btn-top"
+                        >learn more</a
+                      >
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+
             <div id="home-main-after" class="home-main-after arrow-active">
               <a
                 href="#"
@@ -294,14 +327,17 @@
             <button
               class="services-content-scroll-btn"
               aria-label="Center Align"
+              onclick="currentSlideServices(1)"
             ></button
             ><button
               class="services-content-scroll-btn scroll-btn-active scroll-btn-active-new"
               aria-label="Center Align"
+              onclick="currentSlideServices(2)"
             ></button
             ><button
               class="services-content-scroll-btn"
               aria-label="Center Align"
+              onclick="currentSlideServices(3)"
             ></button>
           </div>
           <div class="services-content-items services-active1">
@@ -546,14 +582,17 @@
                 <button
                   class="small-circle-read-more gray-circle gray-circle-new"
                   aria-label="Center Align"
+                  onclick="currentSlide(1)"
                 ></button>
                 <button
                   class="small-circle-read-more"
                   aria-label="Center Align"
+                  onclick="currentSlide(2)"
                 ></button>
                 <button
                   class="small-circle-read-more"
                   aria-label="Center Align"
+                  onclick="currentSlide(3)"
                 ></button>
               </div>
             </div>
@@ -1202,5 +1241,10 @@
         </div>
       </footer>
     </div>
+    <script
+      src="https://kit.fontawesome.com/677ce6bf9e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script/script.js"></script>
   </body>
 </html>
