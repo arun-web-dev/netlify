@@ -170,6 +170,8 @@ h2 {
   width: 80%;
   margin: 0 auto;
   height: 740px;
+  transition: all 1s;
+  left: 0;
 }
 
 .animi-from {
@@ -180,23 +182,40 @@ h2 {
   top: 0;
   transition: all 1s;
 }
-
-.animi-slide-first {
-  left: 0%;
+.home-slide-content {
+  transition: all 1s;
 }
+
 .slide-left-first {
   left: -150%;
 }
-
-.animi-from.animi-slide-second {
-  left: 150%;
+.animi-from.animi-slide-1 {
+  transform: translateX(0);
+}
+.animi-from.animi-slide-2 {
+  transform: translateX(150%);
+}
+.animi-from.animi-slide-3 {
+  transform: translateX(300%);
+}
+.animi-from.animi-slide-4 {
+  transform: translateX(450%);
+}
+.animi-from.animi-slide-5 {
+  transform: translateX(600%);
+}
+.animi-from.animi-slide-6 {
+  transform: translateX(750%);
 }
 
 .slide-left-second {
   left: 0;
 }
 
-.animi-slide-infinite {
+.home-slide-content ul {
+  list-style: none;
+}
+/* .animi-slide-infinite {
   animation: slideIn 3s ease-in infinite;
   -webkit-animation: slideIn 3s ease-in infinite;
 }
@@ -219,7 +238,7 @@ h2 {
     right: 100%;
     transition: all 0.5s;
   }
-}
+} */
 
 /*home slide animation end */
 /* 
@@ -859,6 +878,9 @@ section#home-main-section {
   transform: translateY(0);
 }
 
+.services-scroll-content ul {
+  list-style: none;
+}
 .services-scroll-slide-second {
   transform: translateY(-100%);
 }
@@ -1252,16 +1274,29 @@ section#home-main-section {
   left: 0%;
 }
 
+.case-study-scroll-content ul {
+  list-style: none;
+}
+
 .case-study-top-content {
   position: absolute;
   top: 0;
   transform: translateX(0);
 }
-.case-study-top-content.csc-second {
+.case-study-top-content.csc-2 {
   transform: translateX(150%);
 }
-.case-study-top-content.csc-third {
+.case-study-top-content.csc-3 {
   transform: translateX(300%);
+}
+.case-study-top-content.csc-4 {
+  transform: translateX(450%);
+}
+.case-study-top-content.csc-5 {
+  transform: translateX(600%);
+}
+.case-study-top-content.csc-6 {
+  transform: translateX(750%);
 }
 /*case study scroll animation end*/
 
@@ -1887,14 +1922,8 @@ li:hover .single_team_img img {
   height: auto;
   cursor: pointer;
 }
-.int-flex-first img:hover {
-  filter: grayscale(0);
-  transform: scale(1);
-  transition: all 0.5s;
-  opacity: 1;
-}
 
-.image-active {
+.image-active-1 {
   background: rgb(215 202 201) !important;
 }
 
@@ -1903,6 +1932,14 @@ li:hover .single_team_img img {
 }
 p.image-active:hover {
   background: rgb(231, 76, 60) !important;
+  cursor: pointer;
+}
+
+p.image-active:hover img {
+  filter: grayscale(0);
+  transform: scale(1);
+  transition: all 0.5s;
+  opacity: 1;
 }
 .our-blog {
   width: 100%;
@@ -2757,6 +2794,12 @@ a.get-started-btn-footer:hover {
 /*media queries 768px end*/
 
 /*media queries min width 769 and max width 1024px*/
+@media screen and (max-width: 450px) and (min-width: 313px) {
+  .small-circle-read-more {
+    margin-top: 100px;
+  }
+}
+
 @media screen and (max-width: 1254px) and (min-width: 769px) {
   .home-main h1 {
     font-size: 3.2rem;
