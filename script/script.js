@@ -18,35 +18,29 @@ btnRight.addEventListener("click", () => slide("left"));
 autoplay = setInterval(() => slide("auto"), SPEED);
 
 function slide(direction) {
-  // *** If left or right button were clicked, stop autoplay *** //
   if (direction === "right" || direction === "left") {
     stopInterval();
   }
-  // *** If direction is 'auto' then slide to 'autoDir' - variable at the top, otherwise swipe in choosen direction *** //
+
   direction = direction == "auto" ? autoDir : direction;
-  // *** Clear all previously added classes from every photo. *** //
+
   [].forEach.call(slides, (photo) => {
     photo.classList.remove("outleft", "outright", "forOpacity");
   });
   slides[count].classList.remove("inleft", "inright", "forOpacity");
-  // *** Add class from sliding out photo *** //
+
   slides[count].classList.add("out" + direction);
 
-  // *** Update counter - if clicked right button count -1, else count +1 *** //
   count = direction == "right" ? count - 1 : count + 1;
-  // *** Looping slides *** //
-  // *** if reached end go to first slide *** //
+
   if (count > slides.length - 1) {
     count = count % slides.length;
   }
-  // *** if reached first go to last one *** //
+
   if (count < 0) {
     count = slides.length - 1;
   }
-
-  // *** Add class for sliding in photo *** //
   slides[count].classList.add("in" + direction);
-  // *** Update counter *** //
 }
 
 function stopInterval() {
@@ -253,18 +247,18 @@ function list_function() {
   }
 
   if (listStart > triggerBottom) {
-    counters.forEach((counter) => {
-      counter.innerText = "0";
+    counters.forEach((counter1) => {
+      counter1.innerText = "0";
 
       const updateCounter = () => {
-        const target = +counter.getAttribute("data-att");
-        const c = +counter.innerText;
+        const target = +counter1.getAttribute("data-att");
+        const c = +counter1.innerText;
         const increment = target / 300;
         if (c < target) {
-          counter.innerText = `${Math.ceil(c + increment)}`;
+          counter1.innerText = `${Math.ceil(c + increment)}`;
           setTimeout(updateCounter, 10);
         } else {
-          counter.innerText = target;
+          counter1.innerText = target;
         }
       };
       updateCounter();
@@ -445,18 +439,18 @@ bttn.forEach((items) => {
 
 const counters = document.querySelectorAll(".counter");
 
-counters.forEach((counter) => {
-  counter.innerText = "0";
+counters.forEach((counter2) => {
+  counter2.innerText = "0";
 
   const updateCounter = () => {
-    const target = +counter.getAttribute("data-att");
-    const c = +counter.innerText;
+    const target = +counter2.getAttribute("data-att");
+    const c = +counter2.innerText;
     const increment = target / 200;
     if (c < target) {
-      counter.innerText = `${Math.ceil(c + increment)}`;
+      counter2.innerText = `${Math.ceil(c + increment)}`;
       setTimeout(updateCounter, 10);
     } else {
-      counter.innerText = target;
+      counter2.innerText = target;
     }
   };
   updateCounter();
@@ -574,18 +568,18 @@ var showSlidesServicesTimeout;
 showSlidesTop();
 function showSlidesTop() {
   var i;
-  var slides = document.querySelectorAll(".services-content-scroll-btn");
+  let slides2 = document.querySelectorAll(".services-content-scroll-btn");
   slideInexTop++;
-  for (i = 0; i < slides.length; i++) {
-    slides[i].className = slides[i].className.replace(
+  for (i = 0; i < slides2.length; i++) {
+    slides2[i].className = slides2[i].className.replace(
       " scroll-btn-active-new",
       ""
     );
   }
-  if (slideInexTop > slides.length) {
+  if (slideInexTop > slides2.length) {
     slideInexTop = 1;
   }
-  slides[slideInexTop - 1].className += " scroll-btn-active-new";
+  slides2[slideInexTop - 1].className += " scroll-btn-active-new";
   var servicesEl = document.querySelectorAll(".services-content-items");
   if (slideInexTop === 1) {
     servicesEl.forEach((service) => {
@@ -636,7 +630,7 @@ function currentSlideServices(n) {
 }
 function showSlidesServices(n) {
   var i;
-  var slides = document.querySelectorAll(".services-content-scroll-btn");
+  var slides3 = document.querySelectorAll(".services-content-scroll-btn");
   var servicesEl = document.querySelectorAll(".services-content-items");
   if (n > servicesEl.length) {
     slideInexTop = 1;
@@ -645,13 +639,13 @@ function showSlidesServices(n) {
     slideInexTop = servicesEl.length;
   }
   for (i = 0; i < servicesEl.length; i++) {
-    slides[i].className = slides[i].className.replace(
+    slides3[i].className = slides3[i].className.replace(
       " scroll-btn-active-new",
       ""
     );
   }
 
-  slides[slideInexTop - 1].className += " scroll-btn-active-new";
+  slides3[slideInexTop - 1].className += " scroll-btn-active-new";
   if (n === 1) {
     servicesEl.forEach((service) => {
       service.style.transform = "translateY(0)";
