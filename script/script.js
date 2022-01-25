@@ -1,5 +1,60 @@
-"use sctrict";
+"use strict";
+/*slide animation start */
+const autoBox = document.querySelector("input[name=autoplay]"),
+  autoDir = "left",
+  btnLeft = document.querySelector(".button-left"),
+  btnRight = document.querySelector(".button-right"),
+  loader = document.createElement("div"),
+  counter = document.querySelector(".slide_counter"),
+  slider = document.querySelector(".slides"),
+  slides = document.querySelectorAll(".slides li"),
+  SPEED = 3000;
+let count = 0,
+  autoplay = null;
 
+btnLeft.addEventListener("click", () => slide("right"));
+btnRight.addEventListener("click", () => slide("left"));
+
+autoplay = setInterval(() => slide("auto"), SPEED);
+
+function slide(direction) {
+  // *** If left or right button were clicked, stop autoplay *** //
+  if (direction === "right" || direction === "left") {
+    stopInterval();
+  }
+  // *** If direction is 'auto' then slide to 'autoDir' - variable at the top, otherwise swipe in choosen direction *** //
+  direction = direction == "auto" ? autoDir : direction;
+  // *** Clear all previously added classes from every photo. *** //
+  [].forEach.call(slides, (photo) => {
+    photo.classList.remove("outleft", "outright", "forOpacity");
+  });
+  slides[count].classList.remove("inleft", "inright", "forOpacity");
+  // *** Add class from sliding out photo *** //
+  slides[count].classList.add("out" + direction);
+
+  // *** Update counter - if clicked right button count -1, else count +1 *** //
+  count = direction == "right" ? count - 1 : count + 1;
+  // *** Looping slides *** //
+  // *** if reached end go to first slide *** //
+  if (count > slides.length - 1) {
+    count = count % slides.length;
+  }
+  // *** if reached first go to last one *** //
+  if (count < 0) {
+    count = slides.length - 1;
+  }
+
+  // *** Add class for sliding in photo *** //
+  slides[count].classList.add("in" + direction);
+  // *** Update counter *** //
+}
+
+function stopInterval() {
+  clearInterval(autoplay);
+  autoplay = null;
+}
+
+/*slide animation end  */
 const homeMainBefore = document.querySelector("#home-main-before");
 
 const homeMainAfter = document.querySelector("#home-main-after");
@@ -9,75 +64,6 @@ const arrowRight = document.querySelectorAll(".home-main-after");
 
 const header = document.getElementById("header");
 const headerNav = document.getElementById("header-nav");
-
-var slideHome = 0;
-
-showSlidesHome();
-
-function showSlidesHome() {
-  slideHome++;
-  var animiFrom = document.querySelectorAll(".animi-from");
-
-  let homeSlideContent = document.querySelector(".home-slide-content");
-
-  if (slideHome > animiFrom.length - 1) {
-    slideHome = -1;
-  }
-  if (slideHome === animiFrom.length) {
-    homeSlideContent.style.left = "0";
-    return;
-  }
-  if (slideHome === 0) {
-    homeSlideContent.style.left = "0";
-  } else if (slideHome === 1) {
-    homeSlideContent.style.left = "-120%";
-  } else if (slideHome === 2) {
-    homeSlideContent.style.left = "-240%";
-  } else if (slideHome === 3) {
-    homeSlideContent.style.left = "-360%";
-  } else if (slideHome === 4) {
-    homeSlideContent.style.left = "-480%";
-  } else if (slideHome === 5) {
-    homeSlideContent.style.left = "-600%";
-  }
-  setTimeout(showSlidesHome, 4000);
-}
-
-function homeSlideBefore() {
-  homeSlideNew(--slideHome);
-}
-function homeSlide() {
-  homeSlideNew(++slideHome);
-}
-function homeSlideNew(n) {
-  var animiFrom = document.querySelectorAll(".animi-from");
-
-  let homeSlideContent = document.querySelector(".home-slide-content");
-
-  if (n > animiFrom.length - 1) {
-    slideHome = 0;
-  }
-  if (n < 1) {
-    slideHome = animiFrom.length;
-  }
-  if (n === animiFrom.length) {
-    homeSlideContent.style.left = "0";
-    return;
-  }
-  if (n === 0) {
-    homeSlideContent.style.left = "0";
-  } else if (n === 1) {
-    homeSlideContent.style.left = "-120%";
-  } else if (n === 2) {
-    homeSlideContent.style.left = "-240%";
-  } else if (n === 3) {
-    homeSlideContent.style.left = "-360%";
-  } else if (n === 4) {
-    homeSlideContent.style.left = "-480%";
-  } else if (n === 5) {
-    homeSlideContent.style.left = "-600%";
-  }
-}
 
 window.addEventListener("scroll", scrollFunction);
 
@@ -507,6 +493,7 @@ radioBtn.forEach((rdBtn) => {
 var slideIndex = 0;
 
 showSlides();
+var showSlideTimeOut;
 function showSlides() {
   var i;
   var dots = document.querySelectorAll(".small-circle-read-more");
@@ -531,11 +518,18 @@ function showSlides() {
     caseEl.style.left = "-600%";
   } else if (slideIndex === 6) {
     caseEl.style.left = "-750%";
+  } else if (slideIndex === 7) {
+    caseEl.style.left = "-900%";
+  } else if (slideIndex === 8) {
+    caseEl.style.left = "-1050%";
+  } else if (slideIndex === 9) {
+    caseEl.style.left = "-1200%";
   }
-  setTimeout(showSlides, 5000);
+  showSlideTimeOut = setTimeout(showSlides, 5000);
 }
 
 function currentSlide(n) {
+  clearTimeout(showSlideTimeOut);
   showSlidesNew((slideIndex = n));
 }
 function showSlidesNew(n) {
@@ -564,11 +558,18 @@ function showSlidesNew(n) {
     caseEl.style.left = "-600%";
   } else if (n === 6) {
     caseEl.style.left = "-750%";
+  } else if (n === 7) {
+    caseEl.style.left = "-900%";
+  } else if (n === 8) {
+    caseEl.style.left = "-1050%";
+  } else if (n === 9) {
+    caseEl.style.left = "-1200%";
   }
 }
 
 /*radio button fix*/
 let slideInexTop = 0;
+var showSlidesServicesTimeout;
 
 showSlidesTop();
 function showSlidesTop() {
@@ -614,10 +615,23 @@ function showSlidesTop() {
     servicesEl.forEach((service) => {
       service.style.transform = "translateY(-600%)";
     });
+  } else if (slideInexTop === 8) {
+    servicesEl.forEach((service) => {
+      service.style.transform = "translateY(-700%)";
+    });
+  } else if (slideInexTop === 9) {
+    servicesEl.forEach((service) => {
+      service.style.transform = "translateY(-800%)";
+    });
+  } else if (slideInexTop === 10) {
+    servicesEl.forEach((service) => {
+      service.style.transform = "translateY(-900%)";
+    });
   }
-  setTimeout(showSlidesTop, 5000);
+  showSlidesServicesTimeout = setTimeout(showSlidesTop, 5000);
 }
 function currentSlideServices(n) {
+  clearTimeout(showSlidesServicesTimeout);
   showSlidesServices((slideInexTop = n));
 }
 function showSlidesServices(n) {
@@ -662,6 +676,18 @@ function showSlidesServices(n) {
     servicesEl.forEach((service) => {
       service.style.transform = "translateY(-500%)";
     });
+  } else if (n === 7) {
+    servicesEl.forEach((service) => {
+      service.style.transform = "translateY(-600%)";
+    });
+  } else if (n === 8) {
+    servicesEl.forEach((service) => {
+      service.style.transform = "translateY(-700%)";
+    });
+  } else if (n === 9) {
+    servicesEl.forEach((service) => {
+      service.style.transform = "translateY(-800%)";
+    });
   }
 }
 
@@ -699,7 +725,8 @@ function showSuccess(input) {
 //check email is valid
 function checkEmail(input) {
   const re =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    /^(([^<>()[].,;:s@"]+(.[^<>()[].,;:s@"]+)*)|(".+"))@(([[d]{1,3}.[d]{1,3}.[d]{1,3}.[d]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/;
+
   if (re.test(input.value.trim())) {
     showSuccess(input);
   } else {
