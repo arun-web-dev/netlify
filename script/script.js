@@ -27,6 +27,7 @@ function slide(direction) {
   [].forEach.call(slides, (photo) => {
     photo.classList.remove("outleft", "outright", "forOpacity");
   });
+
   slides[count].classList.remove("inleft", "inright", "forOpacity");
 
   slides[count].classList.add("out" + direction);
@@ -40,6 +41,7 @@ function slide(direction) {
   if (count < 0) {
     count = slides.length - 1;
   }
+
   slides[count].classList.add("in" + direction);
 }
 
@@ -193,6 +195,7 @@ function services_function() {
   const servicesStart = servicesContent.getBoundingClientRect().top;
   if (servicesStart < triggerBottom) {
     fromTopServices();
+    /*add code here*/
   } else {
     servicesContent.classList.remove("from-top");
   }

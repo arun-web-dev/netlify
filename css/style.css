@@ -177,7 +177,6 @@ h2 {
   -webkit-animation: goInL 0.5s cubic-bezier(0, 0, 0.46, 0.71);
   animation: goInL 0.5s cubic-bezier(0, 0, 0.46, 0.71);
   position: relative;
-  z-index: 300 !important;
   opacity: 1 !important;
 }
 
@@ -202,7 +201,6 @@ h2 {
   -webkit-animation: goOutL 0.5s cubic-bezier(0, 0, 0.46, 0.71);
   animation: goOutL 0.5s ease-in cubic-bezier(0, 0, 0.46, 0.71);
   position: relative;
-  z-index: 200;
 }
 
 @-webkit-keyframes goOutL {
@@ -226,7 +224,7 @@ h2 {
   -webkit-animation: goInR 0.5s cubic-bezier(0, 0, 0.46, 0.71);
   animation: goInR 0.5s cubic-bezier(0, 0, 0.46, 0.71);
   position: relative;
-  z-index: 300 !important;
+
   opacity: 1 !important;
 }
 
@@ -251,7 +249,6 @@ h2 {
   -webkit-animation: goOutR 0.5s cubic-bezier(0, 0, 0.46, 0.71);
   animation: goOutR 0.5s cubic-bezier(0, 0, 0.46, 0.71);
   position: relative;
-  z-index: 200;
 }
 
 @-webkit-keyframes goOutR {
@@ -278,9 +275,9 @@ h2 {
   position: absolute;
   width: 100%;
 }
-.img:first-child {
+/* .img:first-child {
   z-index: 100;
-}
+} */
 
 /*home slide infite animation end */
 
