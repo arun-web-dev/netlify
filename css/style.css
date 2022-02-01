@@ -1866,6 +1866,18 @@ p.image-active:hover img {
   margin-top: 10px;
   background: #ffffff;
 }
+
+.row-one-read-more {
+  display: none;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.row-one-read-more.active {
+  display: block;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
 .blog-flex-content pre {
   margin-top: 20px;
 }

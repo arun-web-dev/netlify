@@ -433,7 +433,7 @@ bttn.forEach((items) => {
           show.style.transform = "scale(1)";
           show.style.opacity = 100;
         }
-      }, 500);
+      }, 50);
     });
   });
 });
@@ -792,5 +792,14 @@ scrollBtns.forEach((sbtn) => {
       btns1.classList.remove("scroll-btn-active");
     }
     sbtn.classList.add("scroll-btn-active");
+  });
+});
+
+const readMoreBtn = document.querySelectorAll(".read-more-btn");
+readMoreBtn.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    btn.previousElementSibling.classList.toggle("active");
   });
 });
