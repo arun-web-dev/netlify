@@ -1831,10 +1831,17 @@ p.image-active:hover img {
 .blog-flex-content {
   background: #e74e3e;
   width: 300px;
-  padding: 20px 30px;
+  padding: 50px 30px;
   text-align: left;
   position: relative;
   flex: 25%;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.blog-flex-content.active {
+  padding: 20px 30px;
+  transition: all 0.4s;
 }
 
 .blog-flex-content.right::before {
@@ -1870,12 +1877,23 @@ p.image-active:hover img {
 .row-one-read-more {
   display: none;
   opacity: 0;
-  transition: all 0.5s;
+  transition: all 0.4s;
 }
 .row-one-read-more.active {
-  display: block;
+  animation: slide-in-rm 0.4s linear;
   opacity: 1;
-  transition: all 0.5s;
+  display: block;
+  position: relative;
+}
+
+@keyframes slide-in-rm {
+  0% {
+    top: -4%;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 .blog-flex-content pre {
@@ -1906,6 +1924,7 @@ p.image-active:hover img {
   display: flex;
   justify-content: center;
   flex: 50%;
+  height: 386px;
 }
 
 .box-flex-top a {
@@ -2457,7 +2476,13 @@ a.get-started-btn-footer:hover {
     text-align: left;
     width: auto;
     flex: 60%;
+    height: 450px;
   }
+  .blog-flex-content.active {
+    padding: 10px 30px;
+    transition: all 0.4s;
+  }
+
   .keepInTouch-flex {
     display: flex;
     justify-content: center;
@@ -2723,6 +2748,11 @@ a.get-started-btn-footer:hover {
     text-align: left;
     position: relative;
     flex: none;
+    height: 410px;
+  }
+  .blog-flex-content.active {
+    padding: 10px 30px;
+    transition: all 0.4s;
   }
   .flextop-image {
     width: 300px;

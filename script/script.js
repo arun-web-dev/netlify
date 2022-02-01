@@ -796,10 +796,11 @@ scrollBtns.forEach((sbtn) => {
 });
 
 const readMoreBtn = document.querySelectorAll(".read-more-btn");
+const blogContent = document.querySelectorAll(".blog-flex-content");
 readMoreBtn.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
-
     btn.previousElementSibling.classList.toggle("active");
+    btn.parentElement.classList.toggle("active");
   });
 });
