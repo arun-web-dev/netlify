@@ -199,7 +199,7 @@ h2 {
 }
 .outright {
   -webkit-animation: goOutL 0.5s cubic-bezier(0, 0, 0.46, 0.71);
-  animation: goOutL 0.5s ease-in cubic-bezier(0, 0, 0.46, 0.71);
+  animation: goOutL 0.5s cubic-bezier(0, 0, 0.46, 0.71);
   position: relative;
 }
 
