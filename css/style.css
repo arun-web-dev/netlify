@@ -433,8 +433,8 @@ h2 {
 }
 
 .home-main {
-  padding-top: 180px;
-  padding-bottom: 180px;
+  padding-top: 200px;
+  padding-bottom: 230px;
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
@@ -2962,43 +2962,54 @@ a.get-started-btn-footer:hover {
 }
 @media screen and (max-width: 1000px) and (min-width: 770px) {
   .clip-path-header {
-    clip-path: polygon(100% 0, 100% 92%, 50% 100%, 0 92%, 0 0);
+    clip-path: polygon(100% 0, 100% 94%, 50% 100%, 0 94%, 0 0);
   }
 }
 @media screen and (max-width: 1250px) and (min-width: 1000px) {
   .clip-path-header {
-    clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+    clip-path: polygon(100% 0, 100% 92%, 50% 100%, 0 92%, 0 0);
   }
 }
 @media screen and (max-width: 1500px) and (min-width: 1250px) {
   .clip-path-header {
-    clip-path: polygon(100% 0, 100% 88%, 50% 100%, 0 88%, 0 0);
+    clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
   }
 }
 @media screen and (max-width: 1600px) and (min-width: 1500px) {
   .clip-path-header {
-    clip-path: polygon(100% 0, 100% 90%, 50% 104%, 0 90%, 0 0);
+    clip-path: polygon(100% 0, 100% 88%, 50% 100%, 0 88%, 0 0);
   }
 }
 @media screen and (max-width: 1700px) and (min-width: 1600px) {
   .clip-path-header {
-    clip-path: polygon(100% 0, 100% 93%, 50% 106%, 0 93%, 0 0);
+    clip-path: polygon(100% 0, 100% 89%, 50% 102%, 0 89%, 0 0);
   }
 }
 @media screen and (max-width: 1800px) and (min-width: 1700px) {
   .clip-path-header {
-    clip-path: polygon(100% 0, 100% 97%, 50% 109%, 0 97%, 0 0);
+    clip-path: polygon(100% 0, 100% 90%, 50% 104%, 0 90%, 0 0);
   }
 }
-@media screen and (max-width: 2000px) and (min-width: 1800px) {
+@media screen and (max-width: 1900px) and (min-width: 1800px) {
   .clip-path-header {
-    clip-path: polygon(100% 0, 100% 99%, 50% 109%, 0 99%, 0 0);
+    clip-path: polygon(100% 0, 100% 92%, 50% 107%, 0 93%, 0 0);
   }
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (max-width: 2000px) and (min-width: 1900px) {
   .clip-path-header {
-    clip-path: polygon(100% 0, 100% 100%, 50% 110%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 94%, 50% 112%, 0 94%, 0 0);
+  }
+}
+@media screen and (min-width: 2000px) and (max-width: 2150px) {
+  .clip-path-header {
+    clip-path: polygon(100% 0, 100% 96%, 50% 111%, 0 96%, 0 0);
+  }
+}
+
+@media screen and (min-width: 2150px) {
+  .clip-path-header {
+    clip-path: polygon(100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
   }
 }
 
@@ -3016,4 +3027,13 @@ a.get-started-btn-footer:hover {
   .clip-path-header {
     height: 850px;
   }
+}
+@media only screen and (max-width: 1250) and (min-width: 768px) {
+  .home-main p {
+    padding-left: 100;
+    padding-right: 100px;
+  }
+}
+.home-slide-content.slider_container {
+  margin-bottom: 100px;
 }
