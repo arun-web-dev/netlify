@@ -64,7 +64,7 @@ const headerNav = document.getElementById("header-nav");
 window.addEventListener("scroll", scrollFunction);
 
 function scrollFunction() {
-  if (scrollY > header.offsetHeight + 150) {
+  if (scrollY > header.offsetHeight + 20) {
     header.classList.add("top");
   } else {
     header.classList.remove("top");
