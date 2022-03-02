@@ -24,11 +24,6 @@ body {
   border-radius: 4px;
 }
 
-a {
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
 .main-container {
   width: 100%;
 }
@@ -38,6 +33,8 @@ p {
 a {
   font-size: 14px;
   font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -89,10 +86,9 @@ h2 {
   background-color: #4a4c55;
   font-size: 35px;
 }
+
 .hamburger {
   display: none;
-}
-.hamburger {
   position: absolute;
   cursor: pointer;
   right: 2%;
@@ -108,14 +104,6 @@ h2 {
 }
 
 /*hidden nav bar start */
-
-.line {
-  width: 30px;
-  height: 3px;
-  background: #fff;
-  margin: 5px;
-  transition: all 0.5s;
-}
 
 .line {
   width: 30px;
@@ -164,7 +152,6 @@ h2 {
 .recent-content,
 .list-items-container,
 .pricing-section-container,
-.history-content,
 .our-team-container,
 .our-blog-container,
 .integration-container,
@@ -317,10 +304,6 @@ h2 {
   opacity: 1;
 }
 
-.home-slide-content {
-  transition: all 1s;
-}
-
 .slide-left-first {
   left: -150%;
 }
@@ -372,12 +355,10 @@ h2 {
 .nav-links-menu a {
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 400;
   color: rgb(255, 255, 255);
   font-size: 14px;
   margin: 0px 20px 0;
   padding: 5px;
-  transition: all 0.5s ease 0s;
   border-radius: 2px;
   transform: scale3d(1, 1, 1);
   display: inline-block;
@@ -525,7 +506,6 @@ h2 {
 }
 
 .home-main p,
-.home-main h1,
 .home-main h2 {
   color: #fff;
 }
@@ -534,18 +514,14 @@ span.home-paragraph {
   font-size: 1.5rem;
   color: #f4f5f9;
 }
-.home-main h1 {
-  font-size: 4.5rem;
+.home-main h2 {
   word-spacing: 4px;
-  font-weight: 600;
   margin-top: 14px;
   color: #f4f5f9;
-}
-
-.home-main h2 {
   font-size: 72px;
   font-weight: 600;
 }
+
 .small-circle {
   width: 10px;
   height: 10px;
@@ -602,7 +578,6 @@ span.home-paragraph {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
-  border-radius: 2px;
   padding: 15px 4%;
   display: inline-block;
   margin-top: 30px;
@@ -613,7 +588,6 @@ span.home-paragraph {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
-  border-radius: 2px;
   padding: 15px 4%;
   display: inline-block;
   margin-top: 30px;
@@ -1516,7 +1490,6 @@ button.small-circle-read-more.gray-circle-new {
   text-transform: uppercase;
   color: #fff;
   font-size: 0.8rem;
-  border-radius: 2px;
   padding: 10px 8%;
   display: inline-block;
   margin-top: 45px;
@@ -1563,7 +1536,6 @@ a.get-started-btn-pricing:hover {
 
 .our-team-top {
   width: 80%;
-  text-align: center;
   text-align: center;
   margin: 100px auto;
 }
@@ -1914,6 +1886,8 @@ p.image-active:hover img {
 .flextop-image {
   background: url(../images/blogone.webp);
   background-size: cover;
+  width: 300px;
+  flex: 25%;
 }
 
 .second {
@@ -1944,11 +1918,6 @@ p.image-active:hover img {
   color: #f4f5f9;
   font-style: italic;
   font-weight: 400;
-}
-
-.flextop-image {
-  width: 300px;
-  flex: 25%;
 }
 
 .row-one {
@@ -2121,7 +2090,6 @@ span.subscribe-span {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
-  border-radius: 2px;
   padding: 15px 4%;
   display: inline-block;
   margin-top: 80px;
@@ -2192,9 +2160,16 @@ a.get-started-btn-footer:hover {
   font-size: 16px;
   margin-top: 15px;
 }
+
 /*media queries 768px start */
 
 @media screen and (max-width: 768px) {
+  .services-content-image {
+    width: 0%;
+  }
+  .bg-color {
+    background: #202020;
+  }
   .top .header-nav {
     padding: 12px;
   }
@@ -2207,7 +2182,7 @@ a.get-started-btn-footer:hover {
     padding: 0 50px;
   }
 
-  .home-main h1 {
+  .home-main h2 {
     font-size: 3rem;
   }
   .services-content-items span {
@@ -2237,6 +2212,8 @@ a.get-started-btn-footer:hover {
     display: none !important;
     opacity: 0;
     transition: all 0.5s;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .nav-links-menu.nav-active {
     display: flex !important;
@@ -2288,10 +2265,6 @@ a.get-started-btn-footer:hover {
     margin-left: -4%;
   }
 
-  .nav-links-menu {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
   .nav-links-menu a {
     font-size: 1rem;
     margin-left: 0px;
@@ -2302,9 +2275,7 @@ a.get-started-btn-footer:hover {
     gap: 30px;
   }
   .history-content {
-    padding: 50px 0;
     flex-direction: column;
-    gap: 30px;
     max-width: 80%;
     background: rgb(255, 255, 255);
     display: grid;
@@ -2322,7 +2293,7 @@ a.get-started-btn-footer:hover {
     font-size: 1.5rem;
   }
   .services-content-items {
-    padding: 50px 20px;
+    padding: 100px 20px;
     flex: auto;
   }
   .recent {
@@ -2498,7 +2469,6 @@ a.get-started-btn-footer:hover {
   .keepInTouch-flex {
     display: flex;
     justify-content: center;
-    gap: 2%;
     margin-top: 30px;
     flex-direction: column;
     gap: 20px;
@@ -2631,7 +2601,7 @@ a.get-started-btn-footer:hover {
     width: 2px;
     height: 21px;
     background: #fff;
-    top: 43%;
+    top: -21%;
     left: 52%;
     position: absolute;
   }
@@ -2675,15 +2645,6 @@ a.get-started-btn-footer:hover {
     border-radius: 50%;
     box-shadow: 0px 0px 0px 3px rgba(231, 76, 60, 0.65);
   }
-  .single_team_text:before {
-    content: "";
-    width: 2px;
-    height: 21px;
-    background: #fff;
-    top: -21%;
-    left: 52%;
-    position: absolute;
-  }
 }
 
 @media screen and (max-height: 550px) {
@@ -2703,7 +2664,7 @@ a.get-started-btn-footer:hover {
 }
 
 @media screen and (max-width: 1254px) and (min-width: 769px) {
-  .home-main h1 {
+  .home-main h2 {
     font-size: 3.2rem;
   }
   .nav-links-menu a {
@@ -3029,19 +2990,45 @@ a.get-started-btn-footer:hover {
 
 @media screen and (max-width: 550px) and (min-width: 350px) {
   .home-main {
-    padding-top: 80px;
+    padding-top: 150px;
     padding-bottom: 150px;
   }
   .clip-path-header {
     height: 850px;
   }
 }
-@media only screen and (max-width: 1250) and (min-width: 768px) {
+@media only screen and (max-width: 1250px) and (min-width: 768px) {
   .home-main p {
-    padding-left: 100;
+    padding-left: 100px;
     padding-right: 100px;
   }
 }
 .home-slide-content.slider_container {
   margin-bottom: 100px;
+}
+
+@media screen and (max-width: 410px) {
+  span.overlay-image {
+    width: 63px;
+    height: 63px;
+    transform: translate(-8%, -129%);
+  }
+}
+
+@media screen and (min-width: 410px) and (max-width: 480px) {
+  span.overlay-image {
+    width: 63px;
+    height: 63px;
+    transform: translate(-8%, -129%);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .our-team-top {
+    margin: 120px auto;
+  }
+}
+
+.top-level {
+  display: none;
 }

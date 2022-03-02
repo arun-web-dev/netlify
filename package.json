@@ -1,0 +1,19 @@
+{
+  "name": "bino",
+  "version": "1.0.0",
+  "description": "project bino",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/exurid-hands-on/arun/bino.git"
+  },
+  "author": "ARUN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/exurid-hands-on/arun/bino/issues"
+  },
+  "homepage": "https://gitlab.com/exurid-hands-on/arun/bino#readme"
+}

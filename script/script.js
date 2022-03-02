@@ -15,7 +15,11 @@ let count = 0,
 btnLeft.addEventListener("click", () => slide("right"));
 btnRight.addEventListener("click", () => slide("left"));
 
-autoplay = setInterval(() => slide("auto"), SPEED);
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    autoplay = setInterval(() => slide("auto"), SPEED);
+  }, 2000);
+});
 
 function slide(direction) {
   if (direction === "right" || direction === "left") {
@@ -117,6 +121,15 @@ const links = document.querySelectorAll(".nav-links-menu li");
 hamburger.addEventListener("click", () => {
   navlinks.classList.toggle("nav-active");
   hamburger.classList.toggle("change");
+  header.classList.toggle("bg-color");
+});
+
+window.addEventListener("resize", function (event) {
+  if (this.window.innerWidth >= 768) {
+    navlinks.classList.remove("nav-active");
+    hamburger.classList.remove("change");
+    header.classList.remove("bg-color");
+  }
 });
 
 for (const btn of btns) {
@@ -527,7 +540,8 @@ function showSlides() {
 
 function currentSlide(n) {
   clearTimeout(showSlideTimeOut);
-  showSlidesNew((slideIndex = n));
+  slideIndex = n;
+  showSlidesNew(slideIndex);
 }
 function showSlidesNew(n) {
   var i;
@@ -629,7 +643,8 @@ function showSlidesTop() {
 }
 function currentSlideServices(n) {
   clearTimeout(showSlidesServicesTimeout);
-  showSlidesServices((slideInexTop = n));
+  slideInexTop = n;
+  showSlidesServices(slideInexTop);
 }
 function showSlidesServices(n) {
   var i;
@@ -721,8 +736,7 @@ function showSuccess(input) {
 
 //check email is valid
 function checkEmail(input) {
-  const re =
-    /^(([^<>()[].,;:s@"]+(.[^<>()[].,;:s@"]+)*)|(".+"))@(([[d]{1,3}.[d]{1,3}.[d]{1,3}.[d]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/;
+  const re = "/(^w.*@w+.w)/";
 
   if (re.test(input.value.trim())) {
     showSuccess(input);
